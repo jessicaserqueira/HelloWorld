@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Core">
+      <FileRef
+         location = "group:Core/AppData/AppData.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Core/Domain/Domain.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Core/FireStorage/FireStorage.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Core/Networking/Networking.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Features">
+      <FileRef
+         location = "group:Features/Features/Features.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Main">
+      <FileRef
+         location = "group:Main/AppNavigation/AppNavigation.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Main/DI/DI.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "container:Hello World.xcodeproj">
+   </FileRef>
+</Workspace>
