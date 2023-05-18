@@ -33,6 +33,10 @@
 		A41DA2EF2A15638300E3AB98 /* Features.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA2E42A15638300E3AB98 /* Features.framework */; };
 		A41DA2F42A15638300E3AB98 /* FeaturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2F32A15638300E3AB98 /* FeaturesTests.swift */; };
 		A41DA2F52A15638300E3AB98 /* Features.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA2E72A15638300E3AB98 /* Features.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A474A3312A168CD4008F6540 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; };
+		A474A3322A168CD4008F6540 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A474A3332A168CD4008F6540 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3302A168CD4008F6540 /* Domain.framework */; };
+		A474A3342A168CD4008F6540 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3302A168CD4008F6540 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,21 @@
 			remoteInfo = Features;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A474A3352A168CD4008F6540 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A474A3342A168CD4008F6540 /* Domain.framework in Embed Frameworks */,
+				A474A3322A168CD4008F6540 /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A40D049B2A156C3A004F42ED /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -73,6 +92,8 @@
 		A41DA2E82A15638300E3AB98 /* Features.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Features.docc; sourceTree = "<group>"; };
 		A41DA2EE2A15638300E3AB98 /* FeaturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeaturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA2F32A15638300E3AB98 /* FeaturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTests.swift; sourceTree = "<group>"; };
+		A474A32F2A168CD4008F6540 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A474A3302A168CD4008F6540 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A474A3332A168CD4008F6540 /* Domain.framework in Frameworks */,
+				A474A3312A168CD4008F6540 /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,10 +120,11 @@
 		A40D04962A156BFA004F42ED /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A40D049A2A156C25004F42ED /* Resources */,
 				A40D04992A156C1A004F42ED /* Features */,
-				A40D04982A156C08004F42ED /* Components */,
 				A40D04972A156C01004F42ED /* Utils */,
+				A40D04982A156C08004F42ED /* Components */,
+				A40D049A2A156C25004F42ED /* Resources */,
+				A40D049F2A156C62004F42ED /* AppCoordinator.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -130,7 +154,6 @@
 		A40D04992A156C1A004F42ED /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				A40D049F2A156C62004F42ED /* AppCoordinator.swift */,
 				A40D049D2A156C49004F42ED /* CreateAccount */,
 				A40D049E2A156C55004F42ED /* Login */,
 			);
@@ -209,6 +232,7 @@
 				A41DA2E62A15638300E3AB98 /* Features */,
 				A41DA2F22A15638300E3AB98 /* FeaturesTests */,
 				A41DA2E52A15638300E3AB98 /* Products */,
+				A474A32E2A168CD4008F6540 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,6 +263,15 @@
 			path = FeaturesTests;
 			sourceTree = "<group>";
 		};
+		A474A32E2A168CD4008F6540 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A474A32F2A168CD4008F6540 /* Common.framework */,
+				A474A3302A168CD4008F6540 /* Domain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -261,6 +294,7 @@
 				A41DA2E02A15638300E3AB98 /* Sources */,
 				A41DA2E12A15638300E3AB98 /* Frameworks */,
 				A41DA2E22A15638300E3AB98 /* Resources */,
+				A474A3352A168CD4008F6540 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
