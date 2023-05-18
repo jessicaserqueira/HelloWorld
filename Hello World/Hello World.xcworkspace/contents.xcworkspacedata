@@ -8,6 +8,9 @@
          location = "group:Core/AppData/AppData.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:Core/Common/Common.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Core/Domain/Domain.xcodeproj">
       </FileRef>
       <FileRef

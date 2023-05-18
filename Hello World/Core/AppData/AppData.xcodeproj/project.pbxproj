@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40D04EC2A156DEB004F42ED /* CreateAccountDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04EA2A156DEB004F42ED /* CreateAccountDataSource.swift */; };
+		A40D04ED2A156DEB004F42ED /* LoginDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04EB2A156DEB004F42ED /* LoginDataSource.swift */; };
+		A40D04F02A156DF3004F42ED /* CreateAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04EE2A156DF3004F42ED /* CreateAccountRepository.swift */; };
+		A40D04F12A156DF3004F42ED /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04EF2A156DF3004F42ED /* LoginRepository.swift */; };
+		A40D051A2A156E52004F42ED /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40D05192A156E52004F42ED /* Common.framework */; };
+		A40D051B2A156E52004F42ED /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A40D05192A156E52004F42ED /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A40D051E2A156E72004F42ED /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40D051D2A156E72004F42ED /* Domain.framework */; };
+		A40D051F2A156E72004F42ED /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A40D051D2A156E72004F42ED /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A41DA2112A15630400E3AB98 /* AppData.docc in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2102A15630400E3AB98 /* AppData.docc */; };
 		A41DA2172A15630400E3AB98 /* AppData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA20C2A15630400E3AB98 /* AppData.framework */; };
 		A41DA21C2A15630400E3AB98 /* AppDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA21B2A15630400E3AB98 /* AppDataTests.swift */; };
@@ -23,7 +31,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A40D051C2A156E52004F42ED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A40D051F2A156E72004F42ED /* Domain.framework in Embed Frameworks */,
+				A40D051B2A156E52004F42ED /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A40D04EA2A156DEB004F42ED /* CreateAccountDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountDataSource.swift; sourceTree = "<group>"; };
+		A40D04EB2A156DEB004F42ED /* LoginDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataSource.swift; sourceTree = "<group>"; };
+		A40D04EE2A156DF3004F42ED /* CreateAccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountRepository.swift; sourceTree = "<group>"; };
+		A40D04EF2A156DF3004F42ED /* LoginRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		A40D05192A156E52004F42ED /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40D051D2A156E72004F42ED /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40D05202A156E77004F42ED /* FireStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FireStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA20C2A15630400E3AB98 /* AppData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA20F2A15630400E3AB98 /* AppData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
 		A41DA2102A15630400E3AB98 /* AppData.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AppData.docc; sourceTree = "<group>"; };
@@ -36,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40D051E2A156E72004F42ED /* Domain.framework in Frameworks */,
+				A40D051A2A156E52004F42ED /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +82,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A40D04E72A156DB0004F42ED /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				A40D04EA2A156DEB004F42ED /* CreateAccountDataSource.swift */,
+				A40D04EB2A156DEB004F42ED /* LoginDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		A40D04E82A156DC3004F42ED /* DataTransferObjectes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataTransferObjectes;
+			sourceTree = "<group>";
+		};
+		A40D04E92A156DDA004F42ED /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A40D04EE2A156DF3004F42ED /* CreateAccountRepository.swift */,
+				A40D04EF2A156DF3004F42ED /* LoginRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A40D05182A156E52004F42ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A40D05202A156E77004F42ED /* FireStorage.framework */,
+				A40D051D2A156E72004F42ED /* Domain.framework */,
+				A40D05192A156E52004F42ED /* Common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A41DA2022A15630400E3AB98 = {
 			isa = PBXGroup;
 			children = (
 				A41DA20E2A15630400E3AB98 /* AppData */,
 				A41DA21A2A15630400E3AB98 /* AppDataTests */,
 				A41DA20D2A15630400E3AB98 /* Products */,
+				A40D05182A156E52004F42ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +139,9 @@
 		A41DA20E2A15630400E3AB98 /* AppData */ = {
 			isa = PBXGroup;
 			children = (
+				A40D04E92A156DDA004F42ED /* Repositories */,
+				A40D04E82A156DC3004F42ED /* DataTransferObjectes */,
+				A40D04E72A156DB0004F42ED /* DataSources */,
 				A41DA20F2A15630400E3AB98 /* AppData.h */,
 				A41DA2102A15630400E3AB98 /* AppData.docc */,
 			);
@@ -107,6 +178,7 @@
 				A41DA2082A15630400E3AB98 /* Sources */,
 				A41DA2092A15630400E3AB98 /* Frameworks */,
 				A41DA20A2A15630400E3AB98 /* Resources */,
+				A40D051C2A156E52004F42ED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40D04F12A156DF3004F42ED /* LoginRepository.swift in Sources */,
+				A40D04EC2A156DEB004F42ED /* CreateAccountDataSource.swift in Sources */,
+				A40D04F02A156DF3004F42ED /* CreateAccountRepository.swift in Sources */,
+				A40D04ED2A156DEB004F42ED /* LoginDataSource.swift in Sources */,
 				A41DA2112A15630400E3AB98 /* AppData.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +470,7 @@
 		A41DA2242A15630400E3AB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -409,6 +486,7 @@
 		A41DA2252A15630400E3AB98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

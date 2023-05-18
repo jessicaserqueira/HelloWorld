@@ -1,0 +1,60 @@
+/* 
+  Localizable.strings
+  HelloWorld
+
+  Created by Jessica Serqueira on 17/05/23.
+  
+*/
+
+// MARK: - SplashView
+"Splash.title" = "Marvel \nComics";
+
+// MARK: - LoginView
+"Login.TextField.placeHolder" = "Insira seu e-mail";
+"Login.TextField.title" = "E-mail";
+"Login.TextFieldPassword.placeholder" = "Digite sua senha";
+"Login.TextFieldPassword.title" = "Password";
+"Login.Button.title" = "Entrar";
+"Login.Label.title" = "Ainda não possui conta?";
+
+// MARK: - ModalNotificationView
+//Create Account
+"Modal.NotficationSuccessCreate.title" = "Conta criada com sucesso";
+"Modal.NotficationSuccessCreate.subTitle" = "Preencha os campos com login e senha";
+"Modal.NotficationFailCreate.title" = "Error ao criar conta";
+"Modal.NotficationFailCreate.subTitle" = "Não foi possível criar sua conta, tente mais tarde";
+//Login
+"Modal.NotficationFailLogin.title" = "Falha no Login";
+"Modal.NotficationFailLogin.subTitle" = "Não foi possível realizar o login, revise os dados e tente novamente, mais tarde";
+
+
+// MARK: - CreateAccountView
+"CreateAccount.Label.title" = "Crie sua Conta";
+"CreateAccount.Ask.title" = "Já possui conta?";
+"CreateAccount.Button.title" = "Criar";
+
+"Password.TextField.placeHolder" = "Insira sua senha";
+"Password.TextField.title" = "Senha";
+
+// MARK: - CharacterHomeView
+"Characters.Title.tile" = "Personagens";
+"FindComic.Search.placeHolder" = "Encontre o seu quadrinho";
+"DetailsCharacter" = "Detalhes do personagem";
+
+// MARK: - DetailsHQView
+"DetailsHQ" = "Detalhes da HQ";
+
+
+// MARK: - HQView
+"MarvelHQ.title" = "Marvel HQ";
+"FindHQName.Search.placeHolder" = "Filtrar pelo nome da HQ";
+
+// MARK: - FavoritesView
+"Favorites.title" = "Favoritos";
+"FindFavorites.Search.placeHolder" = "Filtrar pelo nome do personagem";
+"NotFoundFavorite.text" = "Nenhum resultado encontrado";
+"NotSelected" = "Você ainda não selecionou um personagem favorito";
+
+// MARK: - tabBarView
+"Hq.title" = "HQ's";
+
