@@ -14,17 +14,17 @@ import FireStorage
 class DataAssembly: Assembly {
     
     func assemble(container: Container) {
-        
+    
         assembleLogin(container)
-        
+        assembleCreateAccount(container)
     }
     
     // MARK: - Methods
     private func assembleLogin(_ container: Container) {
-        
+        container.autoregister(Domain.LoginRepository.self, initializer: LoginRepository.init)
     }
     
     private func assembleCreateAccount(_ container: Container) {
-        
+        container.autoregister(Domain.CreateAccountRepository.self, initializer: CreateAccountRepository.init)
     }
 }

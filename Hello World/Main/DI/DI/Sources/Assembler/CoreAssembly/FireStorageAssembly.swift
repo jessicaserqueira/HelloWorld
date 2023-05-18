@@ -19,9 +19,13 @@ class FireStorageAssembly: Assembly {
     
     // MARK: - Methods
     private func assembleBaseFireStorageLayer(_ container: Container) {
-
+        container.autoregister(LoginService.self) { _ in LoginService() }
+        container.autoregister(CreateAccountService.self) { _ in CreateAccountService() }
     }
     
     private func assembleDataSources(_ container: Container) {
+        
+        container.autoregister(AppData.LoginDataSource.self, initializer:LoginDataSource.init)
+        container.autoregister(AppData.CreateAccountDataSource.self, initializer: CreateAccountDataSource.init)
     }
 }

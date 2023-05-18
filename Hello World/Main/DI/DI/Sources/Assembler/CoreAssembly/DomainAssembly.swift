@@ -18,10 +18,16 @@ class DomainAssembly: Assembly {
     
     // MARK: - Methods
     private func assembleLogin(_ container: Container) {
-        
+        container.register(Domain.LoginUseCaseProtocol.self) { r in
+            let repository = r.resolveSafe(Domain.LoginRepository.self)
+            return LoginUseCase(loginRepository: repository)
+        }
     }
     
     private func assembleCreateAccount(_ container: Container) {
-        
+        container.register(Domain.CreateAccountUseCaseProtocol.self) { r in
+            let repository = r.resolveSafe(Domain.CreateAccountRepository.self)
+            return CreateAccountUseCase(createAccountRepository: repository)
+        }
     }
 }

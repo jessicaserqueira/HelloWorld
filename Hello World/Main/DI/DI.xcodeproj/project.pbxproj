@@ -36,6 +36,7 @@
 		A474A3292A168A7B008F6540 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3272A168A7B008F6540 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A474A32B2A168A86008F6540 /* AppNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32A2A168A86008F6540 /* AppNavigation.framework */; };
 		A474A32C2A168A86008F6540 /* AppNavigation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32A2A168A86008F6540 /* AppNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A474A3382A169305008F6540 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = A474A3372A169305008F6540 /* SwinjectAutoregistration */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 				A474A3252A168A77008F6540 /* AppData.framework in Frameworks */,
 				A474A3212A168A50008F6540 /* FireStorage.framework in Frameworks */,
 				A474A32B2A168A86008F6540 /* AppNavigation.framework in Frameworks */,
+				A474A3382A169305008F6540 /* SwinjectAutoregistration in Frameworks */,
 				A474A3152A1689DD008F6540 /* Swinject in Frameworks */,
 				A474A31B2A168A50008F6540 /* Common.framework in Frameworks */,
 				A474A3282A168A7B008F6540 /* Networking.framework in Frameworks */,
@@ -261,6 +263,7 @@
 			name = DI;
 			packageProductDependencies = (
 				A474A3142A1689DD008F6540 /* Swinject */,
+				A474A3372A169305008F6540 /* SwinjectAutoregistration */,
 			);
 			productName = DI;
 			productReference = A41DA29C2A15635300E3AB98 /* DI.framework */;
@@ -313,6 +316,7 @@
 			mainGroup = A41DA2922A15635300E3AB98;
 			packageReferences = (
 				A474A3132A1689DD008F6540 /* XCRemoteSwiftPackageReference "Swinject" */,
+				A474A3362A169305008F6540 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 			);
 			productRefGroup = A41DA29D2A15635300E3AB98 /* Products */;
 			projectDirPath = "";
@@ -626,6 +630,14 @@
 				kind = branch;
 			};
 		};
+		A474A3362A169305008F6540 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -633,6 +645,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A474A3132A1689DD008F6540 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		A474A3372A169305008F6540 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A474A3362A169305008F6540 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

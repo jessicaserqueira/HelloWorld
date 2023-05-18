@@ -26,6 +26,8 @@ public class AppCoordinator: Common.Coordinator {
     public func start() {
         window.rootViewController = self.navigationController
         window.makeKeyAndVisible()
-        
+        guard let loginCoordinator = coordinatorFactory?.makeLoginCoordinator() else {return}
+        loginCoordinator.start()
+        childCoordinators.append(loginCoordinator)
     }
 }
