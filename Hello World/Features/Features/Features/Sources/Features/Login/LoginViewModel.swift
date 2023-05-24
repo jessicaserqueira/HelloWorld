@@ -12,21 +12,21 @@ import Domain
 public class LoginViewModel: ObservableObject {
     private var coordinator: LoginCoordinating?
     @Published public var loginModel = LoginAuthenticationModel(email: "", password: "")
-    @AppStorage("uid") var userID = String()
     @Published public var formInvalid = false
     public var alertText = ""
     
-    internal var loginUseCase: LoginUseCaseProtocol?
+    var loginUseCase: LoginUseCaseProtocol
 
-    public init(coordinator: LoginCoordinating?) {
+    public init(coordinator: LoginCoordinating?, loginUseCase: LoginUseCaseProtocol) {
         self.coordinator = coordinator
+        self.loginUseCase = loginUseCase
     }
 }
 
 extension LoginViewModel: LoginModelling {
 
     public func loginAuthentication(email: String, password: String) {
-        loginUseCase?.loginAuthentication(email: loginModel.email, password: loginModel.password) { [weak self]
+        loginUseCase.loginAuthentication(email: loginModel.email, password: loginModel.password) { [weak self]
             result in
             switch result {
             case .success(()):

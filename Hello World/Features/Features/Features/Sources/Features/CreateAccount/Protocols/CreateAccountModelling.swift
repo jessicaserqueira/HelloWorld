@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-public protocol CreateAccountViewModelling: ObservableObject {
+public protocol CreateAccountModelling: ObservableObject {
     var createAccount: CreateAccountModel { get set }
+    var isButtonDisabled: Bool { get }
     var image: UIImage { get set }
     var formInvalid: Bool { get set }
     var alertText: String { get }
-    var validData: Bool { get }
     var isLoading: Bool { get }
     
     func returnLoginView()

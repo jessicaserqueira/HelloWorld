@@ -17,7 +17,6 @@ public struct NameTextField: View {
             if #available(iOS 15.0, *) {
                 TextField(L10n.Login.TextField.title, text: $name, prompt: Text(L10n.Login.NameTextField.placeHolder).foregroundColor(.black))
                     .keyboardType(.emailAddress)
-                    .font(Font.custom("Nunito-Medium", size: 16))
                     .foregroundColor(.black)
                     .background(Color.clear)
                     .autocapitalization(.none)
@@ -33,7 +32,7 @@ public struct NameTextField: View {
         
         }
         .padding(12)
-        .frame(height: 48)
+        .frame(width: 200, height: 48)
         .background(Color.white.opacity(0.4))
         .overlay(RoundedRectangle(cornerRadius: 10).stroke(borderColor, lineWidth: 2))
     }

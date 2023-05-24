@@ -8,7 +8,7 @@
 import Features
 import Swinject
 
-class CoordinatorsFactoryAssembly: Assembly {
+class CoordinatorsFactory: Assembly {
     
     func assemble(container: Container) {
         container.register(CoordinatorFactory.self) { resolver in

@@ -82,10 +82,10 @@ internal enum L10n {
   }
   internal enum Splash {
     /// Localizable.strings
-    ///   Marvel
     ///
-    ///   Created by NMAS Amaral on 18/01/23.
-    internal static let title = L10n.tr("Localizable", "Splash.title", fallback: "Marvel Comics")
+    ///
+    ///   Created by Jessica Serqueira  on 18/01/23.
+    internal static let title = L10n.tr("Localizable", "Splash.title", fallback: "Hello World")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

@@ -12,6 +12,7 @@
 		A40D050C2A156E04004F42ED /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D050B2A156E04004F42ED /* CommonTests.swift */; };
 		A40D050D2A156E04004F42ED /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = A40D04FF2A156E04004F42ED /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A40D05172A156E2B004F42ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D05162A156E2B004F42ED /* Coordinator.swift */; };
+		A4A685B52A1D47B1003E97EA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685B42A1D47B1003E97EA /* Array+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		A40D05062A156E04004F42ED /* CommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40D050B2A156E04004F42ED /* CommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTests.swift; sourceTree = "<group>"; };
 		A40D05162A156E2B004F42ED /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A4A685B42A1D47B1003E97EA /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		A40D04FE2A156E04004F42ED /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A4A685B42A1D47B1003E97EA /* Array+Extension.swift */,
 				A40D05162A156E2B004F42ED /* Coordinator.swift */,
 				A40D04FF2A156E04004F42ED /* Common.h */,
 				A40D05002A156E04004F42ED /* Common.docc */,
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A685B52A1D47B1003E97EA /* Array+Extension.swift in Sources */,
 				A40D05172A156E2B004F42ED /* Coordinator.swift in Sources */,
 				A40D05012A156E04004F42ED /* Common.docc in Sources */,
 			);

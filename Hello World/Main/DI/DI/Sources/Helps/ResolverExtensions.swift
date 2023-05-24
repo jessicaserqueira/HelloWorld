@@ -22,6 +22,4 @@ public extension Swinject.Resolver {
         }
         return service
     }
-
 }
-

@@ -4,7 +4,7 @@
 //
 //  Created by Jessica Serqueira on 17/05/23.
 //
-
+import SwinjectAutoregistration
 import Swinject
 import Domain
 import AppData
@@ -15,16 +15,7 @@ class DataAssembly: Assembly {
     
     func assemble(container: Container) {
     
-        assembleLogin(container)
-        assembleCreateAccount(container)
-    }
-    
-    // MARK: - Methods
-    private func assembleLogin(_ container: Container) {
-        container.autoregister(Domain.LoginRepository.self, initializer: LoginRepository.init)
-    }
-    
-    private func assembleCreateAccount(_ container: Container) {
-        container.autoregister(Domain.CreateAccountRepository.self, initializer: CreateAccountRepository.init)
+        container.autoregister(Domain.LoginRepository.self, initializer: AppData.LoginRepository.init)
+        container.autoregister(Domain.CreateAccountRepository.self, initializer: AppData.CreateAccountRepository.init)
     }
 }

@@ -18,7 +18,6 @@
 		A40D04B12A156C9E004F42ED /* LoginCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04AF2A156C9E004F42ED /* LoginCoordinating.swift */; };
 		A40D04B22A156C9E004F42ED /* LoginModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04B02A156C9E004F42ED /* LoginModelling.swift */; };
 		A40D04B42A156CA5004F42ED /* LoginAuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04B32A156CA5004F42ED /* LoginAuthenticationModel.swift */; };
-		A40D04B92A156CC3004F42ED /* CreateAccountViewModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04B72A156CC3004F42ED /* CreateAccountViewModelling.swift */; };
 		A40D04BA2A156CC3004F42ED /* CreateAccountCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04B82A156CC3004F42ED /* CreateAccountCoordinating.swift */; };
 		A40D04BC2A156CC9004F42ED /* CreateAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04BB2A156CC9004F42ED /* CreateAccountModel.swift */; };
 		A40D04C22A156CF1004F42ED /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04BD2A156CF1004F42ED /* EmailTextField.swift */; };
@@ -37,6 +36,9 @@
 		A474A3322A168CD4008F6540 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A474A3332A168CD4008F6540 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3302A168CD4008F6540 /* Domain.framework */; };
 		A474A3342A168CD4008F6540 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3302A168CD4008F6540 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4A685B12A1D46DB003E97EA /* CreateAccountModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685B02A1D46DB003E97EA /* CreateAccountModelling.swift */; };
+		A4A685B32A1D474B003E97EA /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685B22A1D474B003E97EA /* ViewModelFactory.swift */; };
+		A4A685E12A1E77D6003E97EA /* AccountValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685E02A1E77D6003E97EA /* AccountValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +78,6 @@
 		A40D04AF2A156C9E004F42ED /* LoginCoordinating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinating.swift; sourceTree = "<group>"; };
 		A40D04B02A156C9E004F42ED /* LoginModelling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModelling.swift; sourceTree = "<group>"; };
 		A40D04B32A156CA5004F42ED /* LoginAuthenticationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAuthenticationModel.swift; sourceTree = "<group>"; };
-		A40D04B72A156CC3004F42ED /* CreateAccountViewModelling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelling.swift; sourceTree = "<group>"; };
 		A40D04B82A156CC3004F42ED /* CreateAccountCoordinating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinating.swift; sourceTree = "<group>"; };
 		A40D04BB2A156CC9004F42ED /* CreateAccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountModel.swift; sourceTree = "<group>"; };
 		A40D04BD2A156CF1004F42ED /* EmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
@@ -94,6 +95,9 @@
 		A41DA2F32A15638300E3AB98 /* FeaturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTests.swift; sourceTree = "<group>"; };
 		A474A32F2A168CD4008F6540 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A474A3302A168CD4008F6540 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4A685B02A1D46DB003E97EA /* CreateAccountModelling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountModelling.swift; sourceTree = "<group>"; };
+		A4A685B22A1D474B003E97EA /* ViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		A4A685E02A1E77D6003E97EA /* AccountValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		A40D04972A156C01004F42ED /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A4A685B22A1D474B003E97EA /* ViewModelFactory.swift */,
 				A40D04C92A156CFE004F42ED /* CoordinatorFactory.swift */,
 				A40D04C72A156CFE004F42ED /* DependencyFactory.swift */,
 				A40D04C82A156CFE004F42ED /* L10n.swift */,
@@ -147,6 +152,7 @@
 				A40D04BF2A156CF1004F42ED /* NameTextField.swift */,
 				A40D04C02A156CF1004F42ED /* PasswordTextField.swift */,
 				A40D04BE2A156CF1004F42ED /* String.swift */,
+				A4A685E02A1E77D6003E97EA /* AccountValidator.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -213,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				A40D04B82A156CC3004F42ED /* CreateAccountCoordinating.swift */,
-				A40D04B72A156CC3004F42ED /* CreateAccountViewModelling.swift */,
+				A4A685B02A1D46DB003E97EA /* CreateAccountModelling.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -383,7 +389,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40D04B92A156CC3004F42ED /* CreateAccountViewModelling.swift in Sources */,
 				A40D04AA2A156C87004F42ED /* LoginView.swift in Sources */,
 				A40D04C52A156CF1004F42ED /* PasswordTextField.swift in Sources */,
 				A40D04C42A156CF1004F42ED /* NameTextField.swift in Sources */,
@@ -397,7 +402,10 @@
 				A40D04A52A156C75004F42ED /* CreateAccountView.swift in Sources */,
 				A40D04CB2A156CFE004F42ED /* L10n.swift in Sources */,
 				A40D04BA2A156CC3004F42ED /* CreateAccountCoordinating.swift in Sources */,
+				A4A685E12A1E77D6003E97EA /* AccountValidator.swift in Sources */,
 				A40D04BC2A156CC9004F42ED /* CreateAccountModel.swift in Sources */,
+				A4A685B12A1D46DB003E97EA /* CreateAccountModelling.swift in Sources */,
+				A4A685B32A1D474B003E97EA /* ViewModelFactory.swift in Sources */,
 				A40D04B42A156CA5004F42ED /* LoginAuthenticationModel.swift in Sources */,
 				A40D04B22A156C9E004F42ED /* LoginModelling.swift in Sources */,
 				A40D04A42A156C75004F42ED /* CreateAccountCoordinator.swift in Sources */,

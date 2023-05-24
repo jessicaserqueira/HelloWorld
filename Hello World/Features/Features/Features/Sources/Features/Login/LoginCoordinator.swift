@@ -15,18 +15,28 @@ public class LoginCoordinator: Coordinator {
     public var childCoordinators: [Coordinator] = []
     public var navigationController: UINavigationController
     var coordinatorFactory: CoordinatorFactory?
+    var viewModelFactory: ViewModelFactory
     
-    public init(navigationController: UINavigationController, coordinatorFactory: CoordinatorFactory?) {
+    public init(navigationController: UINavigationController, coordinatorFactory: CoordinatorFactory?, viewModelFactory: ViewModelFactory) {
         self.navigationController = navigationController
         self.coordinatorFactory = coordinatorFactory
+        self.viewModelFactory = viewModelFactory
     }
     
     public func start()  {
-        let viewModel = LoginViewModel(coordinator: self)
+        showLoginView()
+    }
+    
+    func showLoginView() {
+        let viewModel = viewModelFactory.makeLoginViewModel()
         let loginView = LoginView(viewModel: viewModel)
         let hostingController = UIHostingController(rootView: loginView)
         navigationController.setViewControllers([hostingController], animated: false)
         navigationController.tabBarController?.tabBar.isHidden = false
+    }
+    public func makeLoginView(viewModel: LoginViewModel) -> AnyView {
+        let loginView = LoginView(viewModel: viewModel)
+        return AnyView(loginView)
     }
 }
 
