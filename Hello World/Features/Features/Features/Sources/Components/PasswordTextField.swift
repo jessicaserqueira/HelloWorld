@@ -29,7 +29,6 @@ public struct PasswordTextField: View {
                 if isSecureTextEntry {
                     SecureField(L10n.Login.TextFieldPassword.title, text: $password, prompt: Text(L10n.Login.TextFieldPassword.placeholder).foregroundColor(.black))
                         .keyboardType(.numbersAndPunctuation)
-                        .font(Font.custom("Nunito-Medium", size: 16))
                         .foregroundColor(.black)
                         .background(Color.clear)
                         .autocorrectionDisabled(false)
@@ -56,7 +55,7 @@ public struct PasswordTextField: View {
             }
         }
         .padding(12)
-        .frame(height: 48)
+        .frame(width: 200, height: 48)
         .background(Color.white.opacity(0.4))
         .overlay(RoundedRectangle(cornerRadius: 10).stroke(borderColor, lineWidth: 2))
     }

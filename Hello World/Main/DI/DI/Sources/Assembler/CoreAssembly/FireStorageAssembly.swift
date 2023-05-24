@@ -12,20 +12,11 @@ import FireStorage
 class FireStorageAssembly: Assembly {
     
     func assemble(container: Container) {
+        container.register(LoginService.self) { _ in LoginService() }
+        container.register(CreateAccountService.self) { _ in CreateAccountService() }
         
-        assembleBaseFireStorageLayer(container)
-        assembleDataSources(container)
-    }
-    
-    // MARK: - Methods
-    private func assembleBaseFireStorageLayer(_ container: Container) {
-        container.autoregister(LoginService.self) { _ in LoginService() }
-        container.autoregister(CreateAccountService.self) { _ in CreateAccountService() }
-    }
-    
-    private func assembleDataSources(_ container: Container) {
         
-        container.autoregister(AppData.LoginDataSource.self, initializer:LoginDataSource.init)
-        container.autoregister(AppData.CreateAccountDataSource.self, initializer: CreateAccountDataSource.init)
+        container.autoregister(AppData.LoginDataSource.self, initializer: FireStorage.LoginDataSource.init)
+        container.autoregister(AppData.CreateAccountDataSource.self, initializer: FireStorage.CreateAccountDataSource.init)
     }
 }

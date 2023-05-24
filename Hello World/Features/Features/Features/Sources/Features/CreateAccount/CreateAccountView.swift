@@ -7,30 +7,28 @@
 
 import SwiftUI
 
-struct CreateAccountView<ViewModel: CreateAccountViewModelling>: View {
+struct CreateAccountView<ViewModel: CreateAccountModelling>: View {
     
     @ObservedObject var viewModel: ViewModel
     @State private var showModal = false
-    @State private var isButtonDisable = true
-    @State var isShowPhotoLibrary = false
+    @State private var isShowPhotoLibrary = false
     
     public init(viewModel: ViewModel) {
         self.viewModel = viewModel
     }
     
     var body: some View {
-        
         ZStack {
             Image("login")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
-
+            
             VStack {
-
                 Text(L10n.CreateAccount.Label.title)
                     .font(Font.custom("Bangers-Regular", size: 50))
                     .foregroundColor(.primary)
+                
                 VStack(alignment: .center) {
                     Button {
                         isShowPhotoLibrary = true
@@ -50,7 +48,6 @@ struct CreateAccountView<ViewModel: CreateAccountViewModelling>: View {
                                 .foregroundColor(Color.black)
                                 .cornerRadius(100.0)
                         }
-                        
                     }
                 }
                 .background(Color.white)
@@ -62,7 +59,6 @@ struct CreateAccountView<ViewModel: CreateAccountViewModelling>: View {
                 .sheet(isPresented: $isShowPhotoLibrary) {
                     ImagePicker(selectedImage: $viewModel.image)
                 }
-                
                 NameTextField(name: $viewModel.createAccount.name, borderColor: .black)
                     .padding()
                 EmailTextField(email: $viewModel.createAccount.email, borderColor: .black)
@@ -99,30 +95,11 @@ struct CreateAccountView<ViewModel: CreateAccountViewModelling>: View {
                             .padding(.horizontal)
                             .padding(.bottom, 30)
                     }
-                    .disabled(isButtonDisable)
+                    .disabled(viewModel.isButtonDisabled)
                     .foregroundColor(.gray)
-                    .opacity(isButtonDisable ? 0.5 : 1.0)
+                    .opacity(viewModel.isButtonDisabled ? 0.5 : 1.0)
                     .alert(isPresented: $viewModel.formInvalid) {
                         Alert(title: Text(viewModel.alertText))
-                    }
-                    .onChange(of: viewModel.createAccount.password) { newValue in
-                        let passwordRegex = "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[1-9])(?=.*[A-Z]).{6,}$"
-                        let isValidPassword = newValue.range(of: passwordRegex, options: .regularExpression) != nil
-                        let isValidName = !viewModel.createAccount.name.isEmpty
-                        let isValidEmail = viewModel.createAccount.email.isValidEmail()
-                        isButtonDisable = newValue.isEmpty || !isValidPassword || !isValidName || !isValidEmail
-                    }
-                    .onChange(of: viewModel.createAccount.name) { newValue in
-                        let isValidName = !newValue.isEmpty
-                        let isValidPassword = viewModel.createAccount.password.range(of: "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[1-9])(?=.*[A-Z]).{6,}$", options: .regularExpression) != nil
-                        let isValidEmail = viewModel.createAccount.email.isValidEmail()
-                        isButtonDisable = newValue.isEmpty || !isValidPassword || !isValidEmail || !isValidName
-                    }
-                    .onChange(of: viewModel.createAccount.email) { newValue in
-                        let isValidEmail = newValue.isValidEmail()
-                        let isValidPassword = viewModel.createAccount.password.range(of: "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[1-9])(?=.*[A-Z]).{6,}$", options: .regularExpression) != nil
-                        let isValidName = !viewModel.createAccount.name.isEmpty
-                        isButtonDisable = newValue.isEmpty || !isValidPassword || !isValidName || !isValidEmail
                     }
                 }
             }
@@ -131,14 +108,5 @@ struct CreateAccountView<ViewModel: CreateAccountViewModelling>: View {
             .padding(.horizontal, 32)
             .navigationBarTitleDisplayMode(.inline)
         }
-    }
-}
-
-struct CreateAccountView_Previews: PreviewProvider {
-    static var previews: some View {
-        let viewModel = CreateAccountViewModel(coordinator: nil)
-        CreateAccountView(viewModel: viewModel)
-            .previewDisplayName("Create Account")
-            .preferredColorScheme(.light)
     }
 }

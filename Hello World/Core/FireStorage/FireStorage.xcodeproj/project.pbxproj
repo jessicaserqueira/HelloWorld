@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A40B4EC22A166597009FB68F /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = A40B4EC12A166597009FB68F /* GoogleService-Info (2).plist */; };
 		A40B4ED22A166A3B009FB68F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A40B4ED12A166A3B009FB68F /* FirebaseAuth */; };
 		A40B4ED42A166A3B009FB68F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A40B4ED32A166A3B009FB68F /* FirebaseFirestore */; };
 		A40B4ED62A166A3B009FB68F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A40B4ED52A166A3B009FB68F /* FirebaseStorage */; };
@@ -48,7 +47,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A40B4EC12A166597009FB68F /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
 		A40D04D02A156D49004F42ED /* LoginDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataSource.swift; sourceTree = "<group>"; };
 		A40D04D22A156D4E004F42ED /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		A40D04D42A156D62004F42ED /* CreateAccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountService.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 		A41DA24A2A15632600E3AB98 = {
 			isa = PBXGroup;
 			children = (
-				A40B4EC12A166597009FB68F /* GoogleService-Info (2).plist */,
 				A41DA2562A15632600E3AB98 /* FireStorage */,
 				A41DA2622A15632600E3AB98 /* FireStorageTests */,
 				A41DA2552A15632600E3AB98 /* Products */,
@@ -258,7 +255,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40B4EC22A166597009FB68F /* GoogleService-Info (2).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

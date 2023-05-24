@@ -6,30 +6,26 @@
 //
 
 import UIKit
-import Swinject
 import DI
-import SwinjectAutoregistration
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    private var injector: DependencyInjector?
-
+    private var injector: DI.DependencyInjector?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        var navigationController = UINavigationController()
+        
         if let window = window {
-            injector = DependencyInjector(window: window, navigationController: navigationController)
+            injector = DI.DependencyInjector(window: window)
             injector?.build  { appCoodinator in
-                self.window?.makeKeyAndVisible()
-                self.window?.rootViewController = appCoodinator.navigationController
                 appCoodinator.start()
             }
         }
     }
-
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

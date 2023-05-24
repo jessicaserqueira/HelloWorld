@@ -20,12 +20,22 @@ public class CreateAccountViewModel: ObservableObject {
     
     private var createAccountUseCase: CreateAccountUseCaseProtocol?
     
-    public init(coordinator: CreateAccountCoordinating?) {
+    public init(coordinator: CreateAccountCoordinating?, createAccountUseCase: CreateAccountUseCaseProtocol?) {
         self.coordinator = coordinator
+        self.createAccountUseCase = createAccountUseCase
     }
 }
-
-extension CreateAccountViewModel: CreateAccountViewModelling {
+extension CreateAccountViewModel: CreateAccountModelling {
+    
+    public var isButtonDisabled: Bool {
+        let isValidName = AccountValidator.isValidName(createAccount.name)
+        let isValidEmail = AccountValidator.isValidEmail(createAccount.email)
+        let isValidPassword = AccountValidator.isValidPassword(createAccount.password)
+        return createAccount.name.isEmpty || !isValidName ||
+        createAccount.email.isEmpty || !isValidEmail ||
+        createAccount.password.isEmpty || !isValidPassword ||
+        image.size.width <= 0
+    }
     
     public func returnLoginView() {
         print("return")
@@ -36,10 +46,6 @@ extension CreateAccountViewModel: CreateAccountViewModelling {
         coordinator?.dismissModal()
     }
     
-    public var validData: Bool {
-        return !createAccount.email.isEmpty
-    }
-    
     public func buttonCreateAccount() {
         print("nome: \(createAccount.name), email: \(createAccount.email), senha: \(createAccount.password)")
         
@@ -48,9 +54,7 @@ extension CreateAccountViewModel: CreateAccountViewModelling {
             alertText = "Selecione uma foto"
             return
         }
-        
         isLoading = true
-        
         createAccountUseCase?.signUp(withEmail: createAccount.email, password: createAccount.password, image: image, name: createAccount.name) { err in
             if let err = err {
                 self.formInvalid = true

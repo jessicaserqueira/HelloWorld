@@ -25,7 +25,6 @@ public struct LoginView<ViewModel: LoginModelling>: View {
             VStack {
                 HStack {
                     Text(L10n.Splash.title)
-                        .font(Font.custom("Bangers-Regular", size: 50))
                         .foregroundColor(.primary)
                 }
                 .padding()
@@ -67,14 +66,5 @@ public struct LoginView<ViewModel: LoginModelling>: View {
             }
         }.navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        let viewModel = LoginViewModel(coordinator: nil)
-        LoginView(viewModel: viewModel)
-            .previewDisplayName("Login View")
-            .preferredColorScheme(.light)
     }
 }

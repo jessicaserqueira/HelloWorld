@@ -1,0 +1,7 @@
+
+strings:
+    inputs:
+        - Features/Features/Features/Sources/Resources/Localizable.strings
+    outputs:
+        templateName: structured-swift5
+        output: Features/Features/Features/Sources/Utils/L10n.swift

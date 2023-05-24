@@ -15,15 +15,17 @@ public class CreateAccountCoordinator: Coordinator {
     
     public var childCoordinators: [Coordinator] = []
     public var navigationController: UINavigationController
-    private var coordinatorFactory: CoordinatorFactory
+    private var coordinatorFactory: CoordinatorFactory?
+    var viewModelFactory: ViewModelFactory
     
-    public init(navigationController: UINavigationController, coordinatorFactory: CoordinatorFactory) {
+    public init(navigationController: UINavigationController, coordinatorFactory: CoordinatorFactory?, viewModelFactory: ViewModelFactory) {
         self.navigationController = navigationController
         self.coordinatorFactory = coordinatorFactory
+        self.viewModelFactory = viewModelFactory
     }
     
     public func start()  {
-        let viewModel = CreateAccountViewModel(coordinator: self)
+        let viewModel = viewModelFactory.makeCreateAccountViewModel()
         let createAccountView = CreateAccountView(viewModel: viewModel)
         let hostingController = UIHostingController(rootView: createAccountView)
         navigationController.pushViewController(hostingController, animated: true)
@@ -32,20 +34,20 @@ public class CreateAccountCoordinator: Coordinator {
 
 extension CreateAccountCoordinator: CreateAccountCoordinating {
     public func returnLoginView() {
-        let coordinator = coordinatorFactory.makeLoginCoordinator()
+        guard let coordinator = coordinatorFactory?.makeLoginCoordinator() else {  return }
         coordinator.start()
         childCoordinators.append(coordinator)
     }
     
     public func buttonCreateAccount() {
-        let coordinator = coordinatorFactory.makeLoginCoordinator()
+        guard let coordinator = coordinatorFactory?.makeLoginCoordinator() else { return }
         coordinator.start()
         self.navigationController.popViewController(animated: true)
     }
     
     public func dismissModal() {
         DispatchQueue.main.asyncAfter(deadline: .now()) {
-            let coordinator = self.coordinatorFactory.makeLoginCoordinator()
+            guard let coordinator = self.coordinatorFactory?.makeLoginCoordinator() else { return }
             coordinator.start()
             self.navigationController.popViewController(animated: true)
         }
