@@ -10,11 +10,16 @@ import Firebase
 import AppData
 import SwiftUI
 
-public class LoginService {
+
+public protocol LoginServiceProtocol {
+    func loginAuthentication(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
+}
+
+public class LoginService: LoginServiceProtocol {
     
     public init() {}
     
-    func loginAuthentication(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    public func loginAuthentication(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error {
                 print(error)
@@ -24,7 +29,7 @@ public class LoginService {
                     completion(.failure(NSError(domain: "", code: 0, userInfo: nil)))
                     return
                 }
-                print("usuario logado \(user.uid)")
+                print("usuário logado \(user.uid)")
                 completion(.success(()))
             }
         }

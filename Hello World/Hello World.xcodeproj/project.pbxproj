@@ -80,6 +80,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A40D41C52A1F976B00E5A216 /* Hello WorldRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello WorldRelease.entitlements"; sourceTree = "<group>"; };
 		A41DA1CF2A15622B00E3AB98 /* Hello World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA1D22A15622B00E3AB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A41DA1D42A15622B00E3AB98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 		A41DA1D12A15622B00E3AB98 /* Hello World */ = {
 			isa = PBXGroup;
 			children = (
+				A40D41C52A1F976B00E5A216 /* Hello WorldRelease.entitlements */,
 				A4A685C22A1D4EC2003E97EA /* GoogleService-Info.plist */,
 				A41DA1D22A15622B00E3AB98 /* AppDelegate.swift */,
 				A41DA1D42A15622B00E3AB98 /* SceneDelegate.swift */,
@@ -549,6 +551,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hello World/Hello WorldRelease.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y2Y5NB7L58;
