@@ -12,12 +12,18 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseFirestore
 
+public protocol CreateAccountServiceProtocol {
 
-public class CreateAccountService {
+    func signUp(withEmail email: String, password: String, image: UIImage, name: String, completion: @escaping (String?) -> Void)
+    func uploadPhoto(image: UIImage, name: String, completion: @escaping (String?) -> Void)
+    func createUser(photoUrl: URL, name: String, completion: @escaping (String?) -> Void)
+}
 
+public class CreateAccountService: CreateAccountServiceProtocol {
+    
     public init() { }
     
-    func signUp(withEmail email: String, password: String, image: UIImage, name: String, completion: @escaping (String?) -> Void) {
+    public func signUp(withEmail email: String, password: String, image: UIImage, name: String, completion: @escaping (String?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             guard let user = result?.user, error == nil else {
                 print(error!)
@@ -34,7 +40,7 @@ public class CreateAccountService {
         }
     }
     
-    private func uploadPhoto(image: UIImage, name: String, completion: @escaping (String?) -> Void) {
+    public func uploadPhoto(image: UIImage, name: String, completion: @escaping (String?) -> Void) {
         let filename = UUID().uuidString
         
         guard let data = image.jpegData(compressionQuality: 0.2) else { return }
@@ -53,7 +59,7 @@ public class CreateAccountService {
         }
     }
     
-    private func createUser(photoUrl: URL, name: String, completion: @escaping (String?) -> Void) {
+    public func createUser(photoUrl: URL, name: String, completion: @escaping (String?) -> Void) {
         let id = Auth.auth().currentUser!.uid
         Firestore.firestore().collection("users")
             .document(id)
