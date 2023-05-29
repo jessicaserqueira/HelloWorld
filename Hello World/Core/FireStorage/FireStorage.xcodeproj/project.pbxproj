@@ -20,6 +20,8 @@
 		A40D41BD2A1EA9F000E5A216 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A40D41BC2A1EA9F000E5A216 /* GoogleService-Info.plist */; };
 		A40D41BE2A1EA9F000E5A216 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A40D41BC2A1EA9F000E5A216 /* GoogleService-Info.plist */; };
 		A40D41C22A1EAC1700E5A216 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D41C12A1EAC1700E5A216 /* BaseTestCase.swift */; };
+		A418B3E32A2516FF00F0B1BB /* MockCreateAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418B3E22A2516FF00F0B1BB /* MockCreateAccountService.swift */; };
+		A418B3E52A2518B400F0B1BB /* CreateAccountServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418B3E42A2518B400F0B1BB /* CreateAccountServiceTests.swift */; };
 		A41DA2592A15632600E3AB98 /* FireStorage.docc in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2582A15632600E3AB98 /* FireStorage.docc */; };
 		A41DA25F2A15632600E3AB98 /* FireStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA2542A15632600E3AB98 /* FireStorage.framework */; };
 		A41DA2652A15632600E3AB98 /* FireStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA2572A15632600E3AB98 /* FireStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,6 +62,8 @@
 		A40D41BA2A1E8EC300E5A216 /* MockLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginService.swift; sourceTree = "<group>"; };
 		A40D41BC2A1EA9F000E5A216 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A40D41C12A1EAC1700E5A216 /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		A418B3E22A2516FF00F0B1BB /* MockCreateAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCreateAccountService.swift; sourceTree = "<group>"; };
+		A418B3E42A2518B400F0B1BB /* CreateAccountServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountServiceTests.swift; sourceTree = "<group>"; };
 		A41DA2542A15632600E3AB98 /* FireStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FireStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA2572A15632600E3AB98 /* FireStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireStorage.h; sourceTree = "<group>"; };
 		A41DA2582A15632600E3AB98 /* FireStorage.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FireStorage.docc; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 			children = (
 				A40D41BA2A1E8EC300E5A216 /* MockLoginService.swift */,
 				A40D41B82A1E8E4400E5A216 /* LoginServiceTests.swift */,
+				A418B3E22A2516FF00F0B1BB /* MockCreateAccountService.swift */,
+				A418B3E42A2518B400F0B1BB /* CreateAccountServiceTests.swift */,
 				A40D41C12A1EAC1700E5A216 /* BaseTestCase.swift */,
 			);
 			path = FireStorageTests;
@@ -298,6 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40D41C22A1EAC1700E5A216 /* BaseTestCase.swift in Sources */,
+				A418B3E32A2516FF00F0B1BB /* MockCreateAccountService.swift in Sources */,
+				A418B3E52A2518B400F0B1BB /* CreateAccountServiceTests.swift in Sources */,
 				A42C11032A250B9C00B42BD9 /* MockLoginService.swift in Sources */,
 				A40D41B92A1E8E4400E5A216 /* LoginServiceTests.swift in Sources */,
 			);
