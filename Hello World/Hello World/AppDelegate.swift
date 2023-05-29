@@ -9,16 +9,15 @@ import UIKit
 import SwiftUI
 import DI
 import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-            FirebaseApp.configure()
-
+        FirebaseApp.configure()
         return true
     }
-
     
     // MARK: UISceneSession Lifecycle
     

@@ -16,10 +16,14 @@
 		A40D04D72A156D69004F42ED /* CreateAccountDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04D62A156D69004F42ED /* CreateAccountDataSource.swift */; };
 		A40D05252A156E87004F42ED /* AppData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40D05242A156E87004F42ED /* AppData.framework */; };
 		A40D05262A156E87004F42ED /* AppData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A40D05242A156E87004F42ED /* AppData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A40D41B92A1E8E4400E5A216 /* LoginServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D41B82A1E8E4400E5A216 /* LoginServiceTests.swift */; };
+		A40D41BD2A1EA9F000E5A216 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A40D41BC2A1EA9F000E5A216 /* GoogleService-Info.plist */; };
+		A40D41BE2A1EA9F000E5A216 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A40D41BC2A1EA9F000E5A216 /* GoogleService-Info.plist */; };
+		A40D41C22A1EAC1700E5A216 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D41C12A1EAC1700E5A216 /* BaseTestCase.swift */; };
 		A41DA2592A15632600E3AB98 /* FireStorage.docc in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2582A15632600E3AB98 /* FireStorage.docc */; };
 		A41DA25F2A15632600E3AB98 /* FireStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA2542A15632600E3AB98 /* FireStorage.framework */; };
-		A41DA2642A15632600E3AB98 /* FireStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2632A15632600E3AB98 /* FireStorageTests.swift */; };
 		A41DA2652A15632600E3AB98 /* FireStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA2572A15632600E3AB98 /* FireStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A42C11032A250B9C00B42BD9 /* MockLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D41BA2A1E8EC300E5A216 /* MockLoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +56,14 @@
 		A40D04D42A156D62004F42ED /* CreateAccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountService.swift; sourceTree = "<group>"; };
 		A40D04D62A156D69004F42ED /* CreateAccountDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountDataSource.swift; sourceTree = "<group>"; };
 		A40D05242A156E87004F42ED /* AppData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40D41B82A1E8E4400E5A216 /* LoginServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceTests.swift; sourceTree = "<group>"; };
+		A40D41BA2A1E8EC300E5A216 /* MockLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginService.swift; sourceTree = "<group>"; };
+		A40D41BC2A1EA9F000E5A216 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A40D41C12A1EAC1700E5A216 /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		A41DA2542A15632600E3AB98 /* FireStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FireStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA2572A15632600E3AB98 /* FireStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireStorage.h; sourceTree = "<group>"; };
 		A41DA2582A15632600E3AB98 /* FireStorage.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FireStorage.docc; sourceTree = "<group>"; };
 		A41DA25E2A15632600E3AB98 /* FireStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A41DA2632A15632600E3AB98 /* FireStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStorageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +146,7 @@
 		A41DA2562A15632600E3AB98 /* FireStorage */ = {
 			isa = PBXGroup;
 			children = (
+				A40D41BC2A1EA9F000E5A216 /* GoogleService-Info.plist */,
 				A40D04CD2A156D1C004F42ED /* Sources */,
 				A41DA2572A15632600E3AB98 /* FireStorage.h */,
 				A41DA2582A15632600E3AB98 /* FireStorage.docc */,
@@ -149,7 +157,9 @@
 		A41DA2622A15632600E3AB98 /* FireStorageTests */ = {
 			isa = PBXGroup;
 			children = (
-				A41DA2632A15632600E3AB98 /* FireStorageTests.swift */,
+				A40D41BA2A1E8EC300E5A216 /* MockLoginService.swift */,
+				A40D41B82A1E8E4400E5A216 /* LoginServiceTests.swift */,
+				A40D41C12A1EAC1700E5A216 /* BaseTestCase.swift */,
 			);
 			path = FireStorageTests;
 			sourceTree = "<group>";
@@ -203,6 +213,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A46244232A1F9BFF00680CB1 /* PBXTargetDependency */,
 				A41DA2612A15632600E3AB98 /* PBXTargetDependency */,
 			);
 			name = FireStorageTests;
@@ -255,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40D41BD2A1EA9F000E5A216 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40D41BE2A1EA9F000E5A216 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A41DA2642A15632600E3AB98 /* FireStorageTests.swift in Sources */,
+				A40D41C22A1EAC1700E5A216 /* BaseTestCase.swift in Sources */,
+				A42C11032A250B9C00B42BD9 /* MockLoginService.swift in Sources */,
+				A40D41B92A1E8E4400E5A216 /* LoginServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +310,10 @@
 			isa = PBXTargetDependency;
 			target = A41DA2532A15632600E3AB98 /* FireStorage */;
 			targetProxy = A41DA2602A15632600E3AB98 /* PBXContainerItemProxy */;
+		};
+		A46244232A1F9BFF00680CB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A46244222A1F9BFF00680CB1 /* FirebaseAuth */;
 		};
 /* End PBXTargetDependency section */
 
@@ -563,6 +582,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A40B4ED02A166A3B009FB68F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		A46244222A1F9BFF00680CB1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A40B4ED02A166A3B009FB68F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
