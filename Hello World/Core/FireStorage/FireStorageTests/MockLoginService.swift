@@ -31,3 +31,4 @@ class MockLoginService: LoginServiceProtocol {
         signInCompletion?(.failure(error))
     }
 }
+
