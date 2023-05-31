@@ -8,6 +8,6 @@
 import Foundation
 
 public protocol LoginCoordinating {
-    func loginValidation(email: String, password: String)
+    func loginValidation()
     func createAccount()
 }
