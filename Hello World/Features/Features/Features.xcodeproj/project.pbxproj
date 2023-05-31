@@ -30,7 +30,7 @@
 		A40D04CC2A156CFE004F42ED /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D04C92A156CFE004F42ED /* CoordinatorFactory.swift */; };
 		A41DA2E92A15638300E3AB98 /* Features.docc in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2E82A15638300E3AB98 /* Features.docc */; };
 		A41DA2EF2A15638300E3AB98 /* Features.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA2E42A15638300E3AB98 /* Features.framework */; };
-		A41DA2F42A15638300E3AB98 /* FeaturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2F32A15638300E3AB98 /* FeaturesTests.swift */; };
+		A41DA2F42A15638300E3AB98 /* MockLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2F32A15638300E3AB98 /* MockLoginCoordinator.swift */; };
 		A41DA2F52A15638300E3AB98 /* Features.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA2E72A15638300E3AB98 /* Features.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A474A3312A168CD4008F6540 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; };
 		A474A3322A168CD4008F6540 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -39,6 +39,10 @@
 		A4A685B12A1D46DB003E97EA /* CreateAccountModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685B02A1D46DB003E97EA /* CreateAccountModelling.swift */; };
 		A4A685B32A1D474B003E97EA /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685B22A1D474B003E97EA /* ViewModelFactory.swift */; };
 		A4A685E12A1E77D6003E97EA /* AccountValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685E02A1E77D6003E97EA /* AccountValidator.swift */; };
+		A4BC905A2A266F8300859CCA /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A4BC90592A266F8300859CCA /* Swinject */; };
+		A4BC905D2A266FAC00859CCA /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = A4BC905C2A266FAC00859CCA /* SwinjectAutoregistration */; };
+		A4DB65132A2523A600A699FB /* MockLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DB65122A2523A600A699FB /* MockLoginUseCase.swift */; };
+		A4DB65152A2523EA00A699FB /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DB65142A2523EA00A699FB /* LoginViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,12 +96,14 @@
 		A41DA2E72A15638300E3AB98 /* Features.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Features.h; sourceTree = "<group>"; };
 		A41DA2E82A15638300E3AB98 /* Features.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Features.docc; sourceTree = "<group>"; };
 		A41DA2EE2A15638300E3AB98 /* FeaturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeaturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A41DA2F32A15638300E3AB98 /* FeaturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTests.swift; sourceTree = "<group>"; };
+		A41DA2F32A15638300E3AB98 /* MockLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginCoordinator.swift; sourceTree = "<group>"; };
 		A474A32F2A168CD4008F6540 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A474A3302A168CD4008F6540 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A685B02A1D46DB003E97EA /* CreateAccountModelling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountModelling.swift; sourceTree = "<group>"; };
 		A4A685B22A1D474B003E97EA /* ViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		A4A685E02A1E77D6003E97EA /* AccountValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountValidator.swift; sourceTree = "<group>"; };
+		A4DB65122A2523A600A699FB /* MockLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginUseCase.swift; sourceTree = "<group>"; };
+		A4DB65142A2523EA00A699FB /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,8 @@
 			files = (
 				A474A3332A168CD4008F6540 /* Domain.framework in Frameworks */,
 				A474A3312A168CD4008F6540 /* Common.framework in Frameworks */,
+				A4BC905A2A266F8300859CCA /* Swinject in Frameworks */,
+				A4BC905D2A266FAC00859CCA /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +272,9 @@
 		A41DA2F22A15638300E3AB98 /* FeaturesTests */ = {
 			isa = PBXGroup;
 			children = (
-				A41DA2F32A15638300E3AB98 /* FeaturesTests.swift */,
+				A41DA2F32A15638300E3AB98 /* MockLoginCoordinator.swift */,
+				A4DB65122A2523A600A699FB /* MockLoginUseCase.swift */,
+				A4DB65142A2523EA00A699FB /* LoginViewModelTests.swift */,
 			);
 			path = FeaturesTests;
 			sourceTree = "<group>";
@@ -307,6 +317,10 @@
 			dependencies = (
 			);
 			name = Features;
+			packageProductDependencies = (
+				A4BC90592A266F8300859CCA /* Swinject */,
+				A4BC905C2A266FAC00859CCA /* SwinjectAutoregistration */,
+			);
 			productName = Features;
 			productReference = A41DA2E42A15638300E3AB98 /* Features.framework */;
 			productType = "com.apple.product-type.framework";
@@ -356,6 +370,10 @@
 				Base,
 			);
 			mainGroup = A41DA2DA2A15638300E3AB98;
+			packageReferences = (
+				A4BC90582A266F8300859CCA /* XCRemoteSwiftPackageReference "Swinject" */,
+				A4BC905B2A266FAC00859CCA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
 			productRefGroup = A41DA2E52A15638300E3AB98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -420,7 +438,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A41DA2F42A15638300E3AB98 /* FeaturesTests.swift in Sources */,
+				A4DB65152A2523EA00A699FB /* LoginViewModelTests.swift in Sources */,
+				A41DA2F42A15638300E3AB98 /* MockLoginCoordinator.swift in Sources */,
+				A4DB65132A2523A600A699FB /* MockLoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +692,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4BC90582A266F8300859CCA /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A4BC905B2A266FAC00859CCA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4BC90592A266F8300859CCA /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4BC90582A266F8300859CCA /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		A4BC905C2A266FAC00859CCA /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4BC905B2A266FAC00859CCA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A41DA2DB2A15638300E3AB98 /* Project object */;
 }

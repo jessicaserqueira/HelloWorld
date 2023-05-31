@@ -49,7 +49,7 @@ extension LoginCoordinator: LoginCoordinating {
         childCoordinators.append(coordinator)
     }
     
-    public func loginValidation(email: String, password: String) {
+    public func loginValidation() {
         guard let coordinator = coordinatorFactory?.makeLoginCoordinator() else {  return }
         coordinator.start()
         childCoordinators.append(coordinator)

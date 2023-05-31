@@ -30,7 +30,7 @@ extension LoginViewModel: LoginModelling {
             result in
             switch result {
             case .success(()):
-                self?.coordinator?.loginValidation(email: email, password: password)
+                self?.coordinator?.loginValidation()
             case .failure(let error):
                 print(error.localizedDescription)
             }
