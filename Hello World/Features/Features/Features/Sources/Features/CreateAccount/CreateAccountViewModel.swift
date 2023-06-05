@@ -18,9 +18,9 @@ public class CreateAccountViewModel: ObservableObject {
     @Published public var formInvalid = false
     public var alertText = ""
     
-    private var createAccountUseCase: CreateAccountUseCaseProtocol?
+    public var createAccountUseCase: CreateAccountUseCaseProtocol
     
-    public init(coordinator: CreateAccountCoordinating?, createAccountUseCase: CreateAccountUseCaseProtocol?) {
+    public init(coordinator: CreateAccountCoordinating?, createAccountUseCase: CreateAccountUseCaseProtocol) {
         self.coordinator = coordinator
         self.createAccountUseCase = createAccountUseCase
     }
@@ -31,12 +31,14 @@ extension CreateAccountViewModel: CreateAccountModelling {
         let isValidName = AccountValidator.isValidName(createAccount.name)
         let isValidEmail = AccountValidator.isValidEmail(createAccount.email)
         let isValidPassword = AccountValidator.isValidPassword(createAccount.password)
+        let isValidImage = AccountValidator.isValidImage(image)
+        
         return createAccount.name.isEmpty || !isValidName ||
-        createAccount.email.isEmpty || !isValidEmail ||
-        createAccount.password.isEmpty || !isValidPassword ||
-        image.size.width <= 0
+            createAccount.email.isEmpty || !isValidEmail ||
+            createAccount.password.isEmpty || !isValidPassword ||
+            !isValidImage
     }
-    
+
     public func returnLoginView() {
         print("return")
         coordinator?.returnLoginView()
@@ -55,7 +57,7 @@ extension CreateAccountViewModel: CreateAccountModelling {
             return
         }
         isLoading = true
-        createAccountUseCase?.signUp(withEmail: createAccount.email, password: createAccount.password, image: image, name: createAccount.name) { err in
+        createAccountUseCase.signUp(withEmail: createAccount.email, password: createAccount.password, image: image, name: createAccount.name) { err in
             if let err = err {
                 self.formInvalid = true
                 self.alertText = err

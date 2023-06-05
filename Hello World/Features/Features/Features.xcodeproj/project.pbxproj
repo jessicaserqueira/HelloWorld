@@ -32,6 +32,9 @@
 		A41DA2EF2A15638300E3AB98 /* Features.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA2E42A15638300E3AB98 /* Features.framework */; };
 		A41DA2F42A15638300E3AB98 /* MockLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2F32A15638300E3AB98 /* MockLoginCoordinator.swift */; };
 		A41DA2F52A15638300E3AB98 /* Features.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA2E72A15638300E3AB98 /* Features.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A42A3B852A27B56B00CDFC59 /* CreateAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A3B842A27B56B00CDFC59 /* CreateAccountTests.swift */; };
+		A42A3B872A27B5AE00CDFC59 /* MockCreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A3B862A27B5AE00CDFC59 /* MockCreateAccountCoordinator.swift */; };
+		A42A3B892A27B5C500CDFC59 /* MockCreateAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A3B882A27B5C500CDFC59 /* MockCreateAccountUseCase.swift */; };
 		A474A3312A168CD4008F6540 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; };
 		A474A3322A168CD4008F6540 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A474A3332A168CD4008F6540 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3302A168CD4008F6540 /* Domain.framework */; };
@@ -97,6 +100,9 @@
 		A41DA2E82A15638300E3AB98 /* Features.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Features.docc; sourceTree = "<group>"; };
 		A41DA2EE2A15638300E3AB98 /* FeaturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeaturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA2F32A15638300E3AB98 /* MockLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginCoordinator.swift; sourceTree = "<group>"; };
+		A42A3B842A27B56B00CDFC59 /* CreateAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTests.swift; sourceTree = "<group>"; };
+		A42A3B862A27B5AE00CDFC59 /* MockCreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCreateAccountCoordinator.swift; sourceTree = "<group>"; };
+		A42A3B882A27B5C500CDFC59 /* MockCreateAccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCreateAccountUseCase.swift; sourceTree = "<group>"; };
 		A474A32F2A168CD4008F6540 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A474A3302A168CD4008F6540 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A685B02A1D46DB003E97EA /* CreateAccountModelling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountModelling.swift; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 		A40D04992A156C1A004F42ED /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A42A3B8A2A2E5FC000CDFC59 /* Profile */,
 				A40D049D2A156C49004F42ED /* CreateAccount */,
 				A40D049E2A156C55004F42ED /* Login */,
 			);
@@ -272,11 +279,37 @@
 		A41DA2F22A15638300E3AB98 /* FeaturesTests */ = {
 			isa = PBXGroup;
 			children = (
+				A42A3B832A27B54400CDFC59 /* Login */,
+				A42A3B822A27B52B00CDFC59 /* CreateAccount */,
+			);
+			path = FeaturesTests;
+			sourceTree = "<group>";
+		};
+		A42A3B822A27B52B00CDFC59 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				A42A3B842A27B56B00CDFC59 /* CreateAccountTests.swift */,
+				A42A3B862A27B5AE00CDFC59 /* MockCreateAccountCoordinator.swift */,
+				A42A3B882A27B5C500CDFC59 /* MockCreateAccountUseCase.swift */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		A42A3B832A27B54400CDFC59 /* Login */ = {
+			isa = PBXGroup;
+			children = (
 				A41DA2F32A15638300E3AB98 /* MockLoginCoordinator.swift */,
 				A4DB65122A2523A600A699FB /* MockLoginUseCase.swift */,
 				A4DB65142A2523EA00A699FB /* LoginViewModelTests.swift */,
 			);
-			path = FeaturesTests;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A42A3B8A2A2E5FC000CDFC59 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		A474A32E2A168CD4008F6540 /* Frameworks */ = {
@@ -438,9 +471,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42A3B872A27B5AE00CDFC59 /* MockCreateAccountCoordinator.swift in Sources */,
 				A4DB65152A2523EA00A699FB /* LoginViewModelTests.swift in Sources */,
 				A41DA2F42A15638300E3AB98 /* MockLoginCoordinator.swift in Sources */,
 				A4DB65132A2523A600A699FB /* MockLoginUseCase.swift in Sources */,
+				A42A3B852A27B56B00CDFC59 /* CreateAccountTests.swift in Sources */,
+				A42A3B892A27B5C500CDFC59 /* MockCreateAccountUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct AccountValidator {
     static func isValidName(_ name: String) -> Bool {
@@ -22,4 +23,9 @@ struct AccountValidator {
         let passwordRegex = "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[1-9])(?=.*[A-Z]).{6,}$"
         return password.range(of: passwordRegex, options: .regularExpression) != nil
     }
+    
+    static func isValidImage(_ image: UIImage) -> Bool {
+        return image.size.width > 0 && image.size.height > 0
+    }
+
 }
