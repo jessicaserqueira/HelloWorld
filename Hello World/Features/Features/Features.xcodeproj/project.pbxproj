@@ -35,6 +35,12 @@
 		A42A3B852A27B56B00CDFC59 /* CreateAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A3B842A27B56B00CDFC59 /* CreateAccountTests.swift */; };
 		A42A3B872A27B5AE00CDFC59 /* MockCreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A3B862A27B5AE00CDFC59 /* MockCreateAccountCoordinator.swift */; };
 		A42A3B892A27B5C500CDFC59 /* MockCreateAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A3B882A27B5C500CDFC59 /* MockCreateAccountUseCase.swift */; };
+		A43311412A2E610B008B6DB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311402A2E610B008B6DB6 /* ProfileView.swift */; };
+		A43311432A2E612E008B6DB6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311422A2E612E008B6DB6 /* ProfileViewModel.swift */; };
+		A43311452A2E613B008B6DB6 /* ProfileViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311442A2E613B008B6DB6 /* ProfileViewCoordinator.swift */; };
+		A43311482A2E615B008B6DB6 /* ProfileCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311472A2E615B008B6DB6 /* ProfileCoordinating.swift */; };
+		A433114A2A2E6174008B6DB6 /* ProfileModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311492A2E6174008B6DB6 /* ProfileModelling.swift */; };
+		A433114D2A2E6190008B6DB6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A433114C2A2E6190008B6DB6 /* Profile.swift */; };
 		A474A3312A168CD4008F6540 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; };
 		A474A3322A168CD4008F6540 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A474A3332A168CD4008F6540 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3302A168CD4008F6540 /* Domain.framework */; };
@@ -103,6 +109,12 @@
 		A42A3B842A27B56B00CDFC59 /* CreateAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTests.swift; sourceTree = "<group>"; };
 		A42A3B862A27B5AE00CDFC59 /* MockCreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCreateAccountCoordinator.swift; sourceTree = "<group>"; };
 		A42A3B882A27B5C500CDFC59 /* MockCreateAccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCreateAccountUseCase.swift; sourceTree = "<group>"; };
+		A43311402A2E610B008B6DB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A43311422A2E612E008B6DB6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A43311442A2E613B008B6DB6 /* ProfileViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCoordinator.swift; sourceTree = "<group>"; };
+		A43311472A2E615B008B6DB6 /* ProfileCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinating.swift; sourceTree = "<group>"; };
+		A43311492A2E6174008B6DB6 /* ProfileModelling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModelling.swift; sourceTree = "<group>"; };
+		A433114C2A2E6190008B6DB6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A474A32F2A168CD4008F6540 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A474A3302A168CD4008F6540 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A685B02A1D46DB003E97EA /* CreateAccountModelling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountModelling.swift; sourceTree = "<group>"; };
@@ -308,8 +320,30 @@
 		A42A3B8A2A2E5FC000CDFC59 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A433114B2A2E6185008B6DB6 /* Models */,
+				A43311462A2E6147008B6DB6 /* Protocols */,
+				A43311402A2E610B008B6DB6 /* ProfileView.swift */,
+				A43311422A2E612E008B6DB6 /* ProfileViewModel.swift */,
+				A43311442A2E613B008B6DB6 /* ProfileViewCoordinator.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		A43311462A2E6147008B6DB6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A43311472A2E615B008B6DB6 /* ProfileCoordinating.swift */,
+				A43311492A2E6174008B6DB6 /* ProfileModelling.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A433114B2A2E6185008B6DB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A433114C2A2E6190008B6DB6 /* Profile.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A474A32E2A168CD4008F6540 /* Frameworks */ = {
@@ -440,14 +474,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43311412A2E610B008B6DB6 /* ProfileView.swift in Sources */,
 				A40D04AA2A156C87004F42ED /* LoginView.swift in Sources */,
 				A40D04C52A156CF1004F42ED /* PasswordTextField.swift in Sources */,
 				A40D04C42A156CF1004F42ED /* NameTextField.swift in Sources */,
 				A40D04C22A156CF1004F42ED /* EmailTextField.swift in Sources */,
+				A433114A2A2E6174008B6DB6 /* ProfileModelling.swift in Sources */,
 				A40D04A02A156C62004F42ED /* AppCoordinator.swift in Sources */,
 				A40D04A62A156C75004F42ED /* CreateAccountViewModel.swift in Sources */,
 				A40D04C62A156CF1004F42ED /* ImagePicker.swift in Sources */,
 				A41DA2E92A15638300E3AB98 /* Features.docc in Sources */,
+				A43311482A2E615B008B6DB6 /* ProfileCoordinating.swift in Sources */,
 				A40D04CC2A156CFE004F42ED /* CoordinatorFactory.swift in Sources */,
 				A40D04CA2A156CFE004F42ED /* DependencyFactory.swift in Sources */,
 				A40D04A52A156C75004F42ED /* CreateAccountView.swift in Sources */,
@@ -455,13 +492,16 @@
 				A40D04BA2A156CC3004F42ED /* CreateAccountCoordinating.swift in Sources */,
 				A4A685E12A1E77D6003E97EA /* AccountValidator.swift in Sources */,
 				A40D04BC2A156CC9004F42ED /* CreateAccountModel.swift in Sources */,
+				A43311452A2E613B008B6DB6 /* ProfileViewCoordinator.swift in Sources */,
 				A4A685B12A1D46DB003E97EA /* CreateAccountModelling.swift in Sources */,
 				A4A685B32A1D474B003E97EA /* ViewModelFactory.swift in Sources */,
 				A40D04B42A156CA5004F42ED /* LoginAuthenticationModel.swift in Sources */,
 				A40D04B22A156C9E004F42ED /* LoginModelling.swift in Sources */,
 				A40D04A42A156C75004F42ED /* CreateAccountCoordinator.swift in Sources */,
 				A40D04AC2A156C87004F42ED /* LoginCoordinator.swift in Sources */,
+				A433114D2A2E6190008B6DB6 /* Profile.swift in Sources */,
 				A40D04B12A156C9E004F42ED /* LoginCoordinating.swift in Sources */,
+				A43311432A2E612E008B6DB6 /* ProfileViewModel.swift in Sources */,
 				A40D04C32A156CF1004F42ED /* String.swift in Sources */,
 				A40D04AB2A156C87004F42ED /* LoginViewModel.swift in Sources */,
 			);
