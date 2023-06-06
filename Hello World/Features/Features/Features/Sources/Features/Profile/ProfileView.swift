@@ -12,47 +12,70 @@ struct ProfileView: View {
     @State private var isShowPhotoLibrary = false
     
     var body: some View {
-        VStack {
-            VStack(alignment: .center) {
-                if let image = viewModel.image {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 130, height: 130)
-                        .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.black, lineWidth: 4))
-                        .shadow(radius: 7)
+        ZStack {
+            Color(red: 215/255, green: 229/255, blue: 242/255)                 .edgesIgnoringSafeArea(.all)
+            VStack {
+                Spacer()
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 16)
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 400)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.white, lineWidth: 4)
+                        )
+                    
+                    VStack {
+                        if let image = viewModel.image {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 130, height: 130)
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                                .shadow(radius: 7)
+                                .offset(y: -65)
+                        }
+                        VStack {
+                            Text("\(viewModel.profile.name)")
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                            Text("\(viewModel.profile.email)")
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .padding()
+                            
+                            Text("Sobre mim")
+                                .font(.headline)
+                                .padding(.top, 20)
+                            VStack {
+                                TextEditor(text: $viewModel.profile.bio)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .frame(height: 80)
+                                    .padding()
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(Color(red: 240/255, green: 240/255, blue: 240/255), lineWidth: 2)
+                                    )
+                            }
+                            .frame(width: 250)
+                            
+                        }
+                        .padding(.bottom, 20)
+                    }
                 }
-            }
-            .background(Color.white)
-            .clipShape(Circle())
-            .overlay(Circle().stroke(Color.black, lineWidth: 2))
-            .shadow(radius: 8)
-            .padding(6)
-            .padding(.bottom, 32)
-            
-            VStack(alignment: .leading) {
-                Text("Sobre mim")
-                    .font(.headline)
-                TextEditor(text: $viewModel.profile.bio)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(height: 100)
-                Text("Nome")
-                    .font(.headline)
-                TextField("Digite o nome", text: $viewModel.profile.name)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+                
+                Spacer()
+                
+                Button("Atualizar", action: viewModel.updateProfile)
                     .padding()
-                Text("Email")
-                    .font(.headline)
-                TextField("Digite o email", text: $viewModel.profile.email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(10)
             }
             .padding()
-            
-            Button("Atualizar", action: viewModel.updateProfile)
-                .padding()
         }
+        .navigationBarTitle("Perfil")
     }
 }
 
