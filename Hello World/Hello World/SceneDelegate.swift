@@ -16,16 +16,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        let navigationController = UINavigationController()
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
         if let window = window {
-            injector = DI.DependencyInjector(window: window)
-            injector?.build  { appCoodinator in
-                appCoodinator.start()
+            injector = DI.DependencyInjector(window: window, navigationController: navigationController)
+            injector?.build { appCoordinator in
+                appCoordinator.start()
             }
+            
+            // Defina o navigationController como a raiz da janela
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
         }
     }
+
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

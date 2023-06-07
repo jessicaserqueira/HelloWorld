@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-protocol ProfileViewModelling {
-    var viewModel: ProfileViewModel { get }
+public protocol ProfileModelling {
+    func updateProfile()
 }

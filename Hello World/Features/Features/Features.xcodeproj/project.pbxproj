@@ -41,6 +41,7 @@
 		A43311482A2E615B008B6DB6 /* ProfileCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311472A2E615B008B6DB6 /* ProfileCoordinating.swift */; };
 		A433114A2A2E6174008B6DB6 /* ProfileModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311492A2E6174008B6DB6 /* ProfileModelling.swift */; };
 		A433114D2A2E6190008B6DB6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A433114C2A2E6190008B6DB6 /* Profile.swift */; };
+		A43311502A2F6F25008B6DB6 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A433114F2A2F6F25008B6DB6 /* TabBarCoordinator.swift */; };
 		A474A3312A168CD4008F6540 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; };
 		A474A3322A168CD4008F6540 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A474A3332A168CD4008F6540 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3302A168CD4008F6540 /* Domain.framework */; };
@@ -115,6 +116,7 @@
 		A43311472A2E615B008B6DB6 /* ProfileCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinating.swift; sourceTree = "<group>"; };
 		A43311492A2E6174008B6DB6 /* ProfileModelling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModelling.swift; sourceTree = "<group>"; };
 		A433114C2A2E6190008B6DB6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A433114F2A2F6F25008B6DB6 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		A474A32F2A168CD4008F6540 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A474A3302A168CD4008F6540 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A685B02A1D46DB003E97EA /* CreateAccountModelling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountModelling.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		A40D04992A156C1A004F42ED /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A433114E2A2F6EED008B6DB6 /* TabBar */,
 				A42A3B8A2A2E5FC000CDFC59 /* Profile */,
 				A40D049D2A156C49004F42ED /* CreateAccount */,
 				A40D049E2A156C55004F42ED /* Login */,
@@ -346,6 +349,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A433114E2A2F6EED008B6DB6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A433114F2A2F6F25008B6DB6 /* TabBarCoordinator.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		A474A32E2A168CD4008F6540 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +491,7 @@
 				A40D04C42A156CF1004F42ED /* NameTextField.swift in Sources */,
 				A40D04C22A156CF1004F42ED /* EmailTextField.swift in Sources */,
 				A433114A2A2E6174008B6DB6 /* ProfileModelling.swift in Sources */,
+				A43311502A2F6F25008B6DB6 /* TabBarCoordinator.swift in Sources */,
 				A40D04A02A156C62004F42ED /* AppCoordinator.swift in Sources */,
 				A40D04A62A156C75004F42ED /* CreateAccountViewModel.swift in Sources */,
 				A40D04C62A156CF1004F42ED /* ImagePicker.swift in Sources */,

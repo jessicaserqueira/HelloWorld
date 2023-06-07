@@ -31,4 +31,11 @@ class ViewsFactoryImplementation: ViewModelFactory {
         }
         return viewModel
     }
+    
+    func makeProfileViewModel() -> Features.ProfileViewModel {
+        guard let viewModel = container.resolveSafe((any ProfileModelling).self) as? ProfileViewModel else {
+            preconditionFailure("LoginViewPresenting is nil")
+        }
+        return viewModel
+    }
 }

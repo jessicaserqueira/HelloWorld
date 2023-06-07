@@ -7,15 +7,18 @@
 
 import SwiftUI
 
-class ProfileViewModel: ObservableObject {
+public class ProfileViewModel: ObservableObject {
+    
+    private var coordinator: ProfileCoordinating?
     @Published public var image = UIImage()
-    @Published var profile: Profile
+    @Published var profile = Profile(name: "", email: "", bio: "")
     
-    init(profile: Profile) {
-        self.profile = profile
+    public init(coordinator: ProfileCoordinating?) {
+        self.coordinator = coordinator
     }
-    
-    func updateProfile() {
-        // Lógica para atualizar o perfil de usuário
+}
+
+extension ProfileViewModel: ProfileModelling {
+    public func updateProfile() {
     }
 }

@@ -10,6 +10,8 @@ import Features
 import Swinject
 
 class CoordinatorFactoryImplementation: CoordinatorFactory {
+
+    
     
     private let container: Resolver
     
@@ -29,5 +31,17 @@ class CoordinatorFactoryImplementation: CoordinatorFactory {
         let coordinator =  container.resolveSafe(CreateAccountCoordinator.self)
         return coordinator
     }
-
+    
+    // MARK: - TabBarCoordinator
+    func makeTabBarCoordinator() -> Features.TabBarCoordinator {
+        let coordinator =  container.resolveSafe(TabBarCoordinator.self)
+        return coordinator
+    }
+    
+    // MARK: - ProfileCoordinator
+    func makeProfileCoordinator() -> Features.ProfileCoordinator {
+        let coordinator =  container.resolveSafe(ProfileCoordinator.self)
+        return coordinator
+    }
+    
 }

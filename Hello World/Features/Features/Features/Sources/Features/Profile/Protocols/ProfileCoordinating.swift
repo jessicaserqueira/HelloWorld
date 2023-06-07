@@ -5,4 +5,6 @@
 //  Created by Jessica Serqueira on 05/06/23.
 //
 
-import Foundation
+public protocol ProfileCoordinating {
+    func showProfile()
+}

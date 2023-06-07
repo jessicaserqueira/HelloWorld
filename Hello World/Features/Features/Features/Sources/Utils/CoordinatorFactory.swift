@@ -11,4 +11,6 @@ public protocol CoordinatorFactory: DependencyFactory {
     
     func makeLoginCoordinator() -> LoginCoordinator
     func makeCreateAccountCoordinator() -> CreateAccountCoordinator
+    func makeProfileCoordinator() -> ProfileCoordinator
+    func makeTabBarCoordinator() -> TabBarCoordinator
 }

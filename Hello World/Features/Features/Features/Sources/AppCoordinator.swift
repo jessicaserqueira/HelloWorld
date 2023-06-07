@@ -13,6 +13,7 @@ public class AppCoordinator: Common.Coordinator {
     
     public var window: UIWindow
     public var navigationController: UINavigationController
+    public var tabBarController: UITabBarController
     public var childCoordinators: [Coordinator] = []
     public var coordinatorFactory: CoordinatorFactory?
     public var viewModelFactory: ViewModelFactory?
@@ -22,10 +23,12 @@ public class AppCoordinator: Common.Coordinator {
         self.coordinatorFactory = coordinatorFactory
         self.viewModelFactory = viewModelFactory
         self.navigationController = navigationController
+        self.tabBarController = UITabBarController()
     }
     
     public func start() {
-        window.rootViewController = self.navigationController
+        navigationController.setViewControllers([tabBarController], animated: false)
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
         showLogin()
     }
@@ -37,5 +40,12 @@ extension AppCoordinator {
         guard let loginCoordinator = self.coordinatorFactory?.makeLoginCoordinator() else { return }
         loginCoordinator.start()
         self.childCoordinators.append(loginCoordinator)
+    }
+    
+    @MainActor func loginPersistenceValidation() {
+        guard let coordinator = coordinatorFactory?.makeTabBarCoordinator() else { return }
+        coordinator.start()
+        self.childCoordinators.append(coordinator)
+        navigationController.setViewControllers([coordinator.tabBarViewController], animated: true)
     }
 }

@@ -81,6 +81,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(viewModel: ProfileViewModel(profile: Profile(name: "John Doe", email: "johndoe@example.com", bio: "")))
+        ProfileView(viewModel: ProfileViewModel(coordinator: nil))
     }
 }
