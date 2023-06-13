@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol ProfileUseCaseProtocol {
-    func fetchContacts(completion: @escaping ([Profile]) -> Void)
+    func fetchProfile(completion: @escaping ([Profile]) -> Void)
 }

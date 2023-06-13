@@ -17,7 +17,7 @@ public class ProfileDataSource {
 }
 
 extension ProfileDataSource: AppData.ProfileDataSource {
-    public func fetchContacts(completion: @escaping ([AppData.ProfileDTO]) -> Void) {
+    public func fetchProfile(completion: @escaping ([AppData.ProfileDTO]) -> Void) {
         profile.getProfile { profiles in
             let appDataProfiles = profiles.map { profile in
                 AppData.ProfileDTO(uuid: profile.uuid,

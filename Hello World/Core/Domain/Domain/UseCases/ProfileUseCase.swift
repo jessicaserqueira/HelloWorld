@@ -17,6 +17,6 @@ public class ProfileUseCase {
 
 extension ProfileUseCase: ProfileUseCaseProtocol {
     public func fetchContacts(completion: @escaping ([Profile]) -> Void) {
-        profileRepository.fetchContacts(completion: completion)
+        profileRepository.fetchProfile(completion: completion)
     }
 }

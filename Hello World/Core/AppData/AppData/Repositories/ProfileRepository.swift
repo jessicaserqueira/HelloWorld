@@ -17,8 +17,8 @@ public struct ProfileRepository {
 }
 
 extension ProfileRepository: Domain.ProfileRepository {
-    public func fetchContacts(completion: @escaping ([Domain.Profile]) -> Void) {
-        remote.fetchContacts { profiles in
+    public func fetchProfile(completion: @escaping ([Domain.Profile]) -> Void) {
+        remote.fetchProfile { profiles in
             let domainProfiles = profiles.map { profileDTO in
                 Domain.Profile(uuid: profileDTO.uuid,
                                name: profileDTO.name,

@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol ProfileDataSource {
-    func fetchContacts(completion: @escaping ([ProfileDTO]) -> Void)
+    func fetchProfile(completion: @escaping ([ProfileDTO]) -> Void)
 }
