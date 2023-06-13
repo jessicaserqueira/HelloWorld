@@ -17,5 +17,6 @@ class DataAssembly: Assembly {
     
         container.autoregister(Domain.LoginRepository.self, initializer: AppData.LoginRepository.init)
         container.autoregister(Domain.CreateAccountRepository.self, initializer: AppData.CreateAccountRepository.init)
+        container.autoregister(Domain.ProfileRepository.self, initializer: AppData.ProfileRepository.init)
     }
 }

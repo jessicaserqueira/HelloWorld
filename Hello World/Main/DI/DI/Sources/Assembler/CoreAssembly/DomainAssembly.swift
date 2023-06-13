@@ -15,5 +15,6 @@ class DomainAssembly: Assembly {
         
         container.autoregister(Domain.LoginUseCaseProtocol.self, initializer: LoginUseCase.init)
         container.autoregister(Domain.CreateAccountUseCaseProtocol.self, initializer: CreateAccountUseCase.init)
+        container.autoregister(Domain.ProfileUseCaseProtocol.self, initializer: ProfileUseCase.init)
     }
 }
