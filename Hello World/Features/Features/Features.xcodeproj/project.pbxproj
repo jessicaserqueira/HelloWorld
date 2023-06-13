@@ -40,7 +40,7 @@
 		A43311452A2E613B008B6DB6 /* ProfileViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311442A2E613B008B6DB6 /* ProfileViewCoordinator.swift */; };
 		A43311482A2E615B008B6DB6 /* ProfileCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311472A2E615B008B6DB6 /* ProfileCoordinating.swift */; };
 		A433114A2A2E6174008B6DB6 /* ProfileModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311492A2E6174008B6DB6 /* ProfileModelling.swift */; };
-		A433114D2A2E6190008B6DB6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A433114C2A2E6190008B6DB6 /* Profile.swift */; };
+		A433114D2A2E6190008B6DB6 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A433114C2A2E6190008B6DB6 /* ProfileModel.swift */; };
 		A43311502A2F6F25008B6DB6 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A433114F2A2F6F25008B6DB6 /* TabBarCoordinator.swift */; };
 		A474A3312A168CD4008F6540 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; };
 		A474A3322A168CD4008F6540 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A32F2A168CD4008F6540 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -115,7 +115,7 @@
 		A43311442A2E613B008B6DB6 /* ProfileViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCoordinator.swift; sourceTree = "<group>"; };
 		A43311472A2E615B008B6DB6 /* ProfileCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinating.swift; sourceTree = "<group>"; };
 		A43311492A2E6174008B6DB6 /* ProfileModelling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModelling.swift; sourceTree = "<group>"; };
-		A433114C2A2E6190008B6DB6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A433114C2A2E6190008B6DB6 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		A433114F2A2F6F25008B6DB6 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		A474A32F2A168CD4008F6540 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A474A3302A168CD4008F6540 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -344,7 +344,7 @@
 		A433114B2A2E6185008B6DB6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A433114C2A2E6190008B6DB6 /* Profile.swift */,
+				A433114C2A2E6190008B6DB6 /* ProfileModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -511,7 +511,7 @@
 				A40D04B22A156C9E004F42ED /* LoginModelling.swift in Sources */,
 				A40D04A42A156C75004F42ED /* CreateAccountCoordinator.swift in Sources */,
 				A40D04AC2A156C87004F42ED /* LoginCoordinator.swift in Sources */,
-				A433114D2A2E6190008B6DB6 /* Profile.swift in Sources */,
+				A433114D2A2E6190008B6DB6 /* ProfileModel.swift in Sources */,
 				A40D04B12A156C9E004F42ED /* LoginCoordinating.swift in Sources */,
 				A43311432A2E612E008B6DB6 /* ProfileViewModel.swift in Sources */,
 				A40D04C32A156CF1004F42ED /* String.swift in Sources */,

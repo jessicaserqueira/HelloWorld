@@ -26,6 +26,8 @@
 		A41DA25F2A15632600E3AB98 /* FireStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA2542A15632600E3AB98 /* FireStorage.framework */; };
 		A41DA2652A15632600E3AB98 /* FireStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA2572A15632600E3AB98 /* FireStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42C11032A250B9C00B42BD9 /* MockLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D41BA2A1E8EC300E5A216 /* MockLoginService.swift */; };
+		A47CD1FA2A38A906003C02E0 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD1F92A38A906003C02E0 /* ProfileService.swift */; };
+		A47CD1FC2A38AA2C003C02E0 /* ProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD1FB2A38AA2C003C02E0 /* ProfileDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		A41DA2572A15632600E3AB98 /* FireStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireStorage.h; sourceTree = "<group>"; };
 		A41DA2582A15632600E3AB98 /* FireStorage.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FireStorage.docc; sourceTree = "<group>"; };
 		A41DA25E2A15632600E3AB98 /* FireStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47CD1F92A38A906003C02E0 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		A47CD1FB2A38AA2C003C02E0 /* ProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			children = (
 				A40D04D62A156D69004F42ED /* CreateAccountDataSource.swift */,
 				A40D04D02A156D49004F42ED /* LoginDataSource.swift */,
+				A47CD1FB2A38AA2C003C02E0 /* ProfileDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			children = (
 				A40D04D42A156D62004F42ED /* CreateAccountService.swift */,
 				A40D04D22A156D4E004F42ED /* LoginService.swift */,
+				A47CD1F92A38A906003C02E0 /* ProfileService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40D04D12A156D49004F42ED /* LoginDataSource.swift in Sources */,
+				A47CD1FA2A38A906003C02E0 /* ProfileService.swift in Sources */,
+				A47CD1FC2A38AA2C003C02E0 /* ProfileDataSource.swift in Sources */,
 				A40D04D32A156D4E004F42ED /* LoginService.swift in Sources */,
 				A41DA2592A15632600E3AB98 /* FireStorage.docc in Sources */,
 				A40D04D52A156D62004F42ED /* CreateAccountService.swift in Sources */,

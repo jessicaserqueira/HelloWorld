@@ -11,7 +11,7 @@ public class ProfileViewModel: ObservableObject {
     
     private var coordinator: ProfileCoordinating?
     @Published public var image = UIImage()
-    @Published var profile = Profile(name: "", email: "", bio: "")
+    @Published var profile: [ProfileModel] = []
     
     public init(coordinator: ProfileCoordinating?) {
         self.coordinator = coordinator
