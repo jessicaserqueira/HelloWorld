@@ -38,9 +38,9 @@ struct ProfileView: View {
                                 .offset(y: -65)
                         }
                         VStack {
-                            Text("\(viewModel.profile.name)")
+                            Text("")
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                            Text("\(viewModel.profile.email)")
+                            Text("")
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding()
                             
@@ -48,7 +48,7 @@ struct ProfileView: View {
                                 .font(.headline)
                                 .padding(.top, 20)
                             VStack {
-                                TextEditor(text: $viewModel.profile.bio)
+                                Text(" $viewModel.profile.bio")
                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                     .frame(height: 80)
                                     .padding()
@@ -76,11 +76,5 @@ struct ProfileView: View {
             .padding()
         }
         .navigationBarTitle("Perfil")
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView(viewModel: ProfileViewModel(coordinator: nil))
     }
 }
