@@ -19,7 +19,7 @@ class ProfileAssembly: Assembly {
         // MARK: - ProfileViewModel
         container.autoregister((any ProfileModelling).self, initializer: ProfileViewModel.init)
         container.register((any ProfileModelling).self) { (resolver: Resolver) in
-            return ProfileViewModel(coordinator: resolver.resolveSafe(ProfileCoordinating.self))
+            return ProfileViewModel(coordinator: resolver.resolveSafe(ProfileCoordinating.self), profileUseCase: resolver.resolveSafe(Domain.ProfileUseCaseProtocol.self))
             
         }
     }

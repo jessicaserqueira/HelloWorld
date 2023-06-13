@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Domain
 
 public class ProfileViewModel: ObservableObject {
     
@@ -13,8 +14,11 @@ public class ProfileViewModel: ObservableObject {
     @Published public var image = UIImage()
     @Published var profile: [ProfileModel] = []
     
-    public init(coordinator: ProfileCoordinating?) {
+    public var profileUseCase: ProfileUseCaseProtocol
+    
+    public init(coordinator: ProfileCoordinating?, profileUseCase: ProfileUseCaseProtocol) {
         self.coordinator = coordinator
+        self.profileUseCase = profileUseCase
     }
 }
 
