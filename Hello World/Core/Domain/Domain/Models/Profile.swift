@@ -8,10 +8,10 @@
 import Foundation
 
 public struct Profile: Hashable {
-    public let uuid: String
-    public let name: String
-    public let email: String
-    public let profileUrl: String
+    public var uuid: String
+    public var name: String
+    public var email: String
+    public var profileUrl: String
     
     public init(uuid: String, name: String, email: String, profileUrl: String) {
         self.uuid = uuid

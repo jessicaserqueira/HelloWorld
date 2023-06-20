@@ -8,13 +8,14 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseStorage
 import AppData
 
 public class ProfileService {
     
     public init() {}
     
-   public func getProfile(completion: @escaping ([ProfileDTO]) -> Void) {
+    public func getProfile(completion: @escaping ([ProfileDTO]) -> Void) {
         var profile: [ProfileDTO] = []
         Firestore.firestore().collection("users")
             .getDocuments { querySnapshot, error in
@@ -27,9 +28,9 @@ public class ProfileService {
                     if Auth.auth().currentUser?.uid != document.documentID {
                         print("ID \(document.documentID) \(document.data())")
                         profile.append(ProfileDTO(uuid: document.documentID,
-                                                   name: document.data()["name"] as! String,
-                                                   email: document.data()["email"] as! String,
-                                                profileUrl: document.data()["profileUrl"] as! String))
+                                                  name: document.data()["name"] as! String,
+                                                  email: document.data()["email"] as! String,
+                                                  profileUrl: document.data()["profileUrl"] as! String))
                     }
                 }
                 

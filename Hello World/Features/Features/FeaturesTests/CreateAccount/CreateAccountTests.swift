@@ -71,7 +71,7 @@ final class CreateAccountTests: XCTestCase {
         viewModel.createAccount.password = "password123"
         viewModel.image = UIImage()
         
-        viewModel.buttonCreateAccount()
+        viewModel.signUp()
         useCase?.signUp(withEmail: viewModel.createAccount.email, password: viewModel.createAccount.password, image: viewModel.image , name: viewModel.createAccount.name)  { err in
             if let err = err {
                 print(err)
@@ -87,7 +87,7 @@ final class CreateAccountTests: XCTestCase {
         viewModel.createAccount.email = "john.doe@example.com"
         viewModel.createAccount.password = "password123"
         
-        viewModel.buttonCreateAccount()
+        viewModel.signUp()
         
         XCTAssertTrue(viewModel.formInvalid)
         XCTAssertEqual(viewModel.alertText, "Selecione uma foto")
@@ -102,7 +102,7 @@ final class CreateAccountTests: XCTestCase {
         viewModel.image = UIImage()
         
  
-        viewModel.buttonCreateAccount()
+        viewModel.signUp()
         
         XCTAssertEqual(self.viewModel.alertText, "Selecione uma foto")
         XCTAssertTrue(self.viewModel.formInvalid)
@@ -122,7 +122,7 @@ final class CreateAccountTests: XCTestCase {
             viewModel.createAccount.password = "password123"
             viewModel.image = UIImage()
             
-            viewModel.buttonCreateAccount()
+            viewModel.signUp()
             useCase.signUp(withEmail: viewModel.createAccount.email, password: viewModel.createAccount.password, image: viewModel.image , name: viewModel.createAccount.name)  { err in
                 if let err = err {
                     print(err)

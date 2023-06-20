@@ -6,73 +6,93 @@
 //
 
 import Foundation
-import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseFirestore
+import UIKit
 
-public protocol CreateAccountServiceProtocol {
-
-    func signUp(withEmail email: String, password: String, image: UIImage, name: String, completion: @escaping (String?) -> Void)
-    func uploadPhoto(image: UIImage, name: String, completion: @escaping (String?) -> Void)
-    func createUser(photoUrl: URL, name: String, completion: @escaping (String?) -> Void)
-}
-
-public class CreateAccountService: CreateAccountServiceProtocol {
+public class CreateAccountService {
+    private let userId: String
     
-    public init() { }
+    public init() {
+        if let currentUser = Auth.auth().currentUser {
+            self.userId = currentUser.uid
+        } else {
+            self.userId = "default value"
+        }
+    }
     
     public func signUp(withEmail email: String, password: String, image: UIImage, name: String, completion: @escaping (String?) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            guard let user = result?.user, error == nil else {
-                print(error!)
-                completion(error!.localizedDescription)
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self, let user = result?.user, error == nil else {
+                print(error?.localizedDescription ?? "Unknown error")
+                completion(error?.localizedDescription)
                 return
             }
-            print("usuario criado \(user.uid)")
             
-            self.uploadPhoto(image: image, name: name) { err in
+            print("Usuario criado \(user.uid)")
+            
+            self.uploadPhoto(image: image, name: name, email: email) { error in
+                if let error = error {
+                    completion(error)
+                } else {
+                    completion(nil)
+                }
+            }
+        }
+    }
+    
+    private func uploadPhoto(image: UIImage, name: String, email: String, completion: @escaping (String?) -> Void) {
+        guard let imageData = image.jpegData(compressionQuality: 0.2) else {
+            completion(NSError(domain: "com.yourapp.upload", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to convert image to data"]) as? String)
+            return
+        }
+        
+        let filename = UUID().uuidString
+        let storageRef = Storage.storage().reference().child("images/\(filename).jpg")
+        
+        storageRef.putData(imageData, metadata: nil) { metadata, error in
+            if let error = error {
+                completion(error.localizedDescription)
+                return
+            }
+            
+            storageRef.downloadURL { url, error in
                 if let error = error {
                     completion(error.localizedDescription)
-                }
-            }
-        }
-    }
-    
-    public func uploadPhoto(image: UIImage, name: String, completion: @escaping (String?) -> Void) {
-        let filename = UUID().uuidString
-        
-        guard let data = image.jpegData(compressionQuality: 0.2) else { return }
-        
-        let newMetadata = StorageMetadata()
-        newMetadata.contentType = "image/jpeg"
-        
-        let ref = Storage.storage().reference(withPath: "/images/\(filename).jpg")
-        
-        ref.putData(data, metadata: newMetadata) { metadata, err in
-            ref.downloadURL { url, error in
-                guard let url = url else { return }
-                print("foto criada \(url)")
-                self.createUser(photoUrl: url, name: name, completion: completion)
-            }
-        }
-    }
-    
-    public func createUser(photoUrl: URL, name: String, completion: @escaping (String?) -> Void) {
-        let id = Auth.auth().currentUser!.uid
-        Firestore.firestore().collection("users")
-            .document(id)
-            .setData([
-                "name": name,
-                "uuid": id,
-                "profileUrl": photoUrl.absoluteString
-            ]) { err in
-                if let err = err  {
-                    print(err.localizedDescription)
-                    completion(err.localizedDescription)
                     return
                 }
+                
+                guard let downloadURL = url else {
+                    completion(NSError(domain: "com.yourapp.upload", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to retrieve download URL"]) as? String)
+                    return
+                }
+                
+                print("Foto criada \(downloadURL)")
+                self.createUser(photoUrl: downloadURL, name: name, email: email, completion: completion)
             }
+        }
+    }
+    
+    public func createUser(photoUrl: URL, name: String, email: String, completion: @escaping (String?) -> Void) {
+        let uuid = UUID().uuidString
+        let userDocumentRef = Firestore.firestore().collection("users").document(userId).collection("users").document(uuid)
+        
+        let userData: [String: Any] = [
+            "name": name,
+            "email": email,
+            "uuid": userId,
+            "profileUrl": photoUrl.absoluteString
+        ]
+        
+        userDocumentRef.setData(userData) { error in
+            if let error = error {
+                completion(error.localizedDescription)
+                return
+            }
+            
+            completion(nil)
+        }
     }
 }
