@@ -29,8 +29,7 @@
 		A474A30B2A168971008F6540 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A2FE2A168971008F6540 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A474A30C2A168971008F6540 /* Features.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A2FF2A168971008F6540 /* Features.framework */; };
 		A474A30D2A168971008F6540 /* Features.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A2FF2A168971008F6540 /* Features.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A474A30E2A168971008F6540 /* FireStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3002A168971008F6540 /* FireStorage.framework */; };
-		A474A30F2A168971008F6540 /* FireStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3002A168971008F6540 /* FireStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A474A30F2A168971008F6540 /* FireStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3002A168971008F6540 /* FireStorage.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A474A3102A168971008F6540 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3012A168971008F6540 /* Networking.framework */; };
 		A474A3112A168971008F6540 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3012A168971008F6540 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4A685C32A1D4EC2003E97EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4A685C22A1D4EC2003E97EA /* GoogleService-Info.plist */; };
@@ -118,7 +117,6 @@
 				A474A3022A168971008F6540 /* AppData.framework in Frameworks */,
 				A474A3102A168971008F6540 /* Networking.framework in Frameworks */,
 				A4A685DF2A1E5AF6003E97EA /* FirebaseFirestoreSwift in Frameworks */,
-				A474A30E2A168971008F6540 /* FireStorage.framework in Frameworks */,
 				A474A3042A168971008F6540 /* AppNavigation.framework in Frameworks */,
 				A4A685CD2A1E4182003E97EA /* FirebaseAuth in Frameworks */,
 				A459CA142A167790001B70E9 /* Swinject in Frameworks */,
