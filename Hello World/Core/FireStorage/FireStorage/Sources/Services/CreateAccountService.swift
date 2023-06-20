@@ -77,12 +77,12 @@ public class CreateAccountService {
     
     public func createUser(photoUrl: URL, name: String, email: String, completion: @escaping (String?) -> Void) {
         let uuid = UUID().uuidString
-        let userDocumentRef = Firestore.firestore().collection("users").document(userId).collection("users").document(uuid)
+        let userDocumentRef = Firestore.firestore().collection("users").document(uuid)
         
         let userData: [String: Any] = [
             "name": name,
             "email": email,
-            "uuid": userId,
+            "uuid": uuid,
             "profileUrl": photoUrl.absoluteString
         ]
         

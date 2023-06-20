@@ -36,20 +36,19 @@ struct ProfileView: View {
                             } placeholder: {
                                 ProgressView()
                                     .frame(width: 50, height: 50)
-                                    .scaledToFill()
-                                    .frame(width: 130, height: 130)
-                                    .clipShape(Circle())
-                                    .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                                    .shadow(radius: 7)
-                                    .offset(y: -65)
                             }
+                            .scaledToFill()
+                            .frame(width: 130, height: 130)
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                            .shadow(radius: 7)
+                            .offset(y: -65)
                             
                             VStack {
-                                Text(profile.name)
+                                Text("Nome: \(profile.name)")
                                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                                Text(profile.email)
+                                Text("E-mail: \(profile.email)")
                                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .padding()
                                 
                                 Text("Sobre mim")
                                     .font(.headline)
@@ -58,35 +57,14 @@ struct ProfileView: View {
                                 VStack {
                                     Text(profile.bio)
                                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .frame(height: 80)
+                                        .frame(width: 250, height: 80)
                                         .padding()
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 10)
                                                 .stroke(Color.blue, lineWidth: 1)
                                         )
-                                    
-                                    Button(action: {
-                                        isShowPhotoLibrary.toggle()
-                                    }) {
-                                        Text("Escolher foto")
-                                            .font(.headline)
-                                            .foregroundColor(.white)
-                                            .padding()
-                                            .frame(width: 250, height: 50)
-                                            .background(Color.blue)
-                                            .cornerRadius(10)
-                                    }
-                                    .sheet(isPresented: $isShowPhotoLibrary) {
-                                        // Implementação da seleção da foto da biblioteca
-                                    }
                                 }
                             }
-                            .padding()
-                        } else {
-                            Text("Perfil não encontrado")
-                                .font(.headline)
-                                .foregroundColor(.red)
-                                .padding()
                         }
                     }
                 }
