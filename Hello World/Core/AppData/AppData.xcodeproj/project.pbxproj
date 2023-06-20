@@ -19,6 +19,9 @@
 		A41DA2172A15630400E3AB98 /* AppData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA20C2A15630400E3AB98 /* AppData.framework */; };
 		A41DA21C2A15630400E3AB98 /* AppDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA21B2A15630400E3AB98 /* AppDataTests.swift */; };
 		A41DA21D2A15630400E3AB98 /* AppData.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA20F2A15630400E3AB98 /* AppData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A47CD1F52A38A21D003C02E0 /* ProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD1F42A38A21D003C02E0 /* ProfileDTO.swift */; };
+		A47CD1FE2A38AA5F003C02E0 /* ProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD1FD2A38AA5F003C02E0 /* ProfileDataSource.swift */; };
+		A47CD2002A38AA80003C02E0 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD1FF2A38AA80003C02E0 /* ProfileRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		A41DA2102A15630400E3AB98 /* AppData.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AppData.docc; sourceTree = "<group>"; };
 		A41DA2162A15630400E3AB98 /* AppDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA21B2A15630400E3AB98 /* AppDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataTests.swift; sourceTree = "<group>"; };
+		A47CD1F42A38A21D003C02E0 /* ProfileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDTO.swift; sourceTree = "<group>"; };
+		A47CD1FD2A38AA5F003C02E0 /* ProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSource.swift; sourceTree = "<group>"; };
+		A47CD1FF2A38AA80003C02E0 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 			children = (
 				A40D04EA2A156DEB004F42ED /* CreateAccountDataSource.swift */,
 				A40D04EB2A156DEB004F42ED /* LoginDataSource.swift */,
+				A47CD1FD2A38AA5F003C02E0 /* ProfileDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 		A40D04E82A156DC3004F42ED /* DataTransferObjectes */ = {
 			isa = PBXGroup;
 			children = (
+				A47CD1F42A38A21D003C02E0 /* ProfileDTO.swift */,
 			);
 			path = DataTransferObjectes;
 			sourceTree = "<group>";
@@ -103,6 +111,7 @@
 			children = (
 				A40D04EE2A156DF3004F42ED /* CreateAccountRepository.swift */,
 				A40D04EF2A156DF3004F42ED /* LoginRepository.swift */,
+				A47CD1FF2A38AA80003C02E0 /* ProfileRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -267,8 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40D04F12A156DF3004F42ED /* LoginRepository.swift in Sources */,
+				A47CD1F52A38A21D003C02E0 /* ProfileDTO.swift in Sources */,
+				A47CD1FE2A38AA5F003C02E0 /* ProfileDataSource.swift in Sources */,
 				A40D04EC2A156DEB004F42ED /* CreateAccountDataSource.swift in Sources */,
 				A40D04F02A156DF3004F42ED /* CreateAccountRepository.swift in Sources */,
+				A47CD2002A38AA80003C02E0 /* ProfileRepository.swift in Sources */,
 				A40D04ED2A156DEB004F42ED /* LoginDataSource.swift in Sources */,
 				A41DA2112A15630400E3AB98 /* AppData.docc in Sources */,
 			);

@@ -16,6 +16,6 @@ public protocol CreateAccountModelling: ObservableObject {
     var isLoading: Bool { get }
     
     func returnLoginView()
-    func buttonCreateAccount()
+    func signUp()
     func dismissModal()
 }

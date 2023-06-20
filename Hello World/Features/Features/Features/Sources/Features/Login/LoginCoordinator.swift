@@ -14,11 +14,13 @@ public class LoginCoordinator: Coordinator {
     
     public var childCoordinators: [Coordinator] = []
     public var navigationController: UINavigationController
+    var tabBarController: UITabBarController
     var coordinatorFactory: CoordinatorFactory?
     var viewModelFactory: ViewModelFactory
     
-    public init(navigationController: UINavigationController, coordinatorFactory: CoordinatorFactory?, viewModelFactory: ViewModelFactory) {
+    public init(navigationController: UINavigationController, tabBarController: UITabBarController, coordinatorFactory: CoordinatorFactory?, viewModelFactory: ViewModelFactory) {
         self.navigationController = navigationController
+        self.tabBarController = tabBarController
         self.coordinatorFactory = coordinatorFactory
         self.viewModelFactory = viewModelFactory
     }
@@ -32,11 +34,7 @@ public class LoginCoordinator: Coordinator {
         let loginView = LoginView(viewModel: viewModel)
         let hostingController = UIHostingController(rootView: loginView)
         navigationController.setViewControllers([hostingController], animated: false)
-        navigationController.tabBarController?.tabBar.isHidden = false
-    }
-    public func makeLoginView(viewModel: LoginViewModel) -> AnyView {
-        let loginView = LoginView(viewModel: viewModel)
-        return AnyView(loginView)
+        tabBarController.tabBar.isHidden = false
     }
 }
 
@@ -46,12 +44,11 @@ extension LoginCoordinator: LoginCoordinating {
     public func createAccount() {
         guard let coordinator = coordinatorFactory?.makeCreateAccountCoordinator()  else {  return }
         coordinator.start()
-        childCoordinators.append(coordinator)
+
     }
     
-    public func loginValidation() {
-        guard let coordinator = coordinatorFactory?.makeLoginCoordinator() else {  return }
+    @MainActor public func loginValidation() {
+        guard let coordinator = coordinatorFactory?.makeTabBarCoordinator() else {  return }
         coordinator.start()
-        childCoordinators.append(coordinator)
     }
 }

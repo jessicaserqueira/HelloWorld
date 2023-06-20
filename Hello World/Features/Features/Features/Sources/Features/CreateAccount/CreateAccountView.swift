@@ -49,6 +49,9 @@ struct CreateAccountView<ViewModel: CreateAccountModelling>: View {
                                 .cornerRadius(100.0)
                         }
                     }
+                    .sheet(isPresented: $isShowPhotoLibrary) {
+                        ImagePicker(selectedImage: $viewModel.image)
+                    }
                 }
                 .background(Color.white)
                 .clipShape(Circle())
@@ -56,9 +59,7 @@ struct CreateAccountView<ViewModel: CreateAccountModelling>: View {
                 .shadow(radius: 8)
                 .padding(6)
                 .padding(.bottom, 32)
-                .sheet(isPresented: $isShowPhotoLibrary) {
-                    ImagePicker(selectedImage: $viewModel.image)
-                }
+                
                 NameTextField(name: $viewModel.createAccount.name, borderColor: .black)
                     .padding()
                 EmailTextField(email: $viewModel.createAccount.email, borderColor: .black)
@@ -76,7 +77,7 @@ struct CreateAccountView<ViewModel: CreateAccountModelling>: View {
                 
                 VStack {
                     Button(action: {
-                        viewModel.buttonCreateAccount()
+                        viewModel.signUp()
                         self.showModal = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                             viewModel.dismissModal()

@@ -17,6 +17,10 @@
 		A41DA23B2A15631300E3AB98 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA2302A15631200E3AB98 /* Domain.framework */; };
 		A41DA2402A15631300E3AB98 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA23F2A15631300E3AB98 /* DomainTests.swift */; };
 		A41DA2412A15631300E3AB98 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA2332A15631200E3AB98 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A47CD1F82A38A282003C02E0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD1F72A38A282003C02E0 /* Profile.swift */; };
+		A47CD2022A38AAF0003C02E0 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD2012A38AAF0003C02E0 /* ProfileRepository.swift */; };
+		A47CD2042A38AB17003C02E0 /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD2032A38AB17003C02E0 /* ProfileUseCase.swift */; };
+		A47CD2072A38AB46003C02E0 /* ProfileUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD2062A38AB46003C02E0 /* ProfileUseCaseProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,10 @@
 		A41DA2342A15631200E3AB98 /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
 		A41DA23A2A15631300E3AB98 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA23F2A15631300E3AB98 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		A47CD1F72A38A282003C02E0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A47CD2012A38AAF0003C02E0 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		A47CD2032A38AB17003C02E0 /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
+		A47CD2062A38AB46003C02E0 /* ProfileUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCaseProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 		A40D04D82A156D76004F42ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A47CD1F72A38A282003C02E0 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -76,6 +85,8 @@
 				A40D04DC2A156D9F004F42ED /* CreateAccountUseCaseProtocol.swift */,
 				A40D04DD2A156D9F004F42ED /* LoginUseCase.swift */,
 				A40D04DE2A156D9F004F42ED /* LoginUseCaseProtocol.swift */,
+				A47CD2032A38AB17003C02E0 /* ProfileUseCase.swift */,
+				A47CD2062A38AB46003C02E0 /* ProfileUseCaseProtocol.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -85,6 +96,7 @@
 			children = (
 				A40D04E42A156DAA004F42ED /* CreateAccountRepository.swift */,
 				A40D04E32A156DAA004F42ED /* LoginRepository.swift */,
+				A47CD2012A38AAF0003C02E0 /* ProfileRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -241,7 +253,11 @@
 				A40D04E02A156D9F004F42ED /* CreateAccountUseCaseProtocol.swift in Sources */,
 				A40D04DF2A156D9F004F42ED /* CreateAccountUseCase.swift in Sources */,
 				A40D04E12A156D9F004F42ED /* LoginUseCase.swift in Sources */,
+				A47CD2042A38AB17003C02E0 /* ProfileUseCase.swift in Sources */,
+				A47CD1F82A38A282003C02E0 /* Profile.swift in Sources */,
 				A40D04E52A156DAA004F42ED /* LoginRepository.swift in Sources */,
+				A47CD2022A38AAF0003C02E0 /* ProfileRepository.swift in Sources */,
+				A47CD2072A38AB46003C02E0 /* ProfileUseCaseProtocol.swift in Sources */,
 				A40D04E62A156DAA004F42ED /* CreateAccountRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

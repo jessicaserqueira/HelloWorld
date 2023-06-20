@@ -12,53 +12,56 @@ import Swinject
 class CoordinatorsAssembly: Assembly {
     
     public var window: UIWindow
+    let navigationController: UINavigationController
     
-    public init(window: UIWindow) {
+    public init(window: UIWindow, navigationController: UINavigationController) {
         self.window = window
+        self.navigationController = navigationController
     }
     
     func assemble(container: Container) {
-        assembleAppCoordinator(container: container)
-        assembleLoginCoordinator(container: container)
-        assembleCreateAccountCoordinator(container: container)
-    }
-    
-    func assembleAppCoordinator(container: Container) {
-        let navigationController = UINavigationController()
+        
         let coordinatorFactory = container.resolveSafe(CoordinatorFactory.self)
         let viewModelFactory = container.resolveSafe(ViewModelFactory.self)
-        let appCoordinator = AppCoordinator(window: window, coordinatorFactory: coordinatorFactory, viewModelFactory: viewModelFactory, navigationController: navigationController)
-        container.register(AppCoordinator.self) { _ in appCoordinator }
         
-    }
-    
-    // MARK: - LoginCoordinator
-    func assembleLoginCoordinator(container: Container) {
-        let appCoordinator = container.resolveSafe(AppCoordinator.self)
-        let viewModelFactory = container.resolveSafe(ViewModelFactory.self)
-        let coordinatorFactory = container.resolve(CoordinatorFactory.self)
+        container.register(AppCoordinator.self) { _ in  AppCoordinator(window: self.window, coordinatorFactory: coordinatorFactory, viewModelFactory: viewModelFactory, navigationController: self.navigationController) }
+        let appCoordinator = container.resolve(AppCoordinator.self)
+        
+        
+        // MARK: - LoginCoordinator
         container.register(LoginCoordinator.self) { _ in
-            let loginCoordinator = LoginCoordinator(navigationController: appCoordinator.navigationController,
-                                                    coordinatorFactory: coordinatorFactory,
-                                                    viewModelFactory: viewModelFactory)
-            return loginCoordinator
+            guard let navigationController = appCoordinator?.navigationController,
+                  let tabBarController = appCoordinator?.tabBarController else {
+                fatalError("AppCoordinator não foi inicializado corretamente")
+            }
+            return LoginCoordinator(navigationController: navigationController, tabBarController: tabBarController, coordinatorFactory: coordinatorFactory, viewModelFactory: viewModelFactory)
         }
         
-        _ = container.resolveSafe(LoginCoordinator.self)
-    }
-    
-    
-    // MARK: - CreateAccountCoordinator
-    func assembleCreateAccountCoordinator(container: Container) {
-        let appCoordinator = container.resolveSafe(AppCoordinator.self)
-        let viewModelFactory = container.resolveSafe(ViewModelFactory.self)
-        let coordinatorFactory = container.resolve(CoordinatorFactory.self)
+        
+        // MARK: - CreateAccountCoordinator
         container.register(CreateAccountCoordinator.self) { _ in
-            let coordinator = CreateAccountCoordinator(navigationController: appCoordinator.navigationController,
+            let coordinator = CreateAccountCoordinator(navigationController: self.navigationController,
                                                        coordinatorFactory: coordinatorFactory,
                                                        viewModelFactory: viewModelFactory)
             return coordinator
         }
         _ = container.resolveSafe(CreateAccountCoordinator.self)
+        
+        // MARK: - tabBarCoordinator
+        container.register(TabBarCoordinator.self) { _ in
+            guard let navigationController = appCoordinator?.navigationController,
+                  let tabBarController = appCoordinator?.tabBarController else {
+                fatalError("AppCoordinator não foi inicializado corretamente")
+            }
+            return TabBarCoordinator(navigationController: navigationController, tabBarViewController: tabBarController, coordinatorfactory:  coordinatorFactory)
+        }
+        
+        // MARK: - CreateAccountCoordinator
+        container.register(ProfileCoordinator.self) { _ in
+            guard let tabBarController = appCoordinator?.tabBarController else {
+                fatalError("AppCoordinator não foi inicializado corretamente")
+            }
+            return ProfileCoordinator(tabBarController: tabBarController, coordinatorFactory: coordinatorFactory, viewModelFactory: viewModelFactory)
+        }
     }
 }

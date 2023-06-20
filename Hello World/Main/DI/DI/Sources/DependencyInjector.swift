@@ -13,11 +13,12 @@ import SwinjectAutoregistration
 
 public class DependencyInjector {
 
-    private var window: UIWindow
-
+    public var window: UIWindow
+    let navigationController: UINavigationController
     
-    public init(window: UIWindow) {
+    public init(window: UIWindow, navigationController: UINavigationController) {
         self.window = window
+        self.navigationController = navigationController
     }
     
     public func build(completion: (_ appCoordinator: AppCoordinator) -> Void) {
@@ -30,9 +31,10 @@ public class DependencyInjector {
             DomainAssembly(),
             DataAssembly(),
             
-            CoordinatorsAssembly(window: window),
+            CoordinatorsAssembly(window: window, navigationController: navigationController),
             LoginAssembly(),
             CreateAccountAssembly(),
+            ProfileAssembly(),
 
         ])
         

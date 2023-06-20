@@ -17,7 +17,7 @@ public class CreateAccountUseCase {
     }
 }
 
-extension CreateAccountUseCase: CreateAccountUseCaseProtocol {
+extension CreateAccountUseCase: CreateAccountUseCaseProtocol {    
     public func signUp(withEmail email: String, password: String, image: UIImage, name: String, completion: @escaping (String?) -> Void) {
         createAccountRepository.signUp(withEmail: email, password: password, image: image, name: name, completion: completion)
     }
