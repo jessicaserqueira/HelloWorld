@@ -56,12 +56,20 @@ class CoordinatorsAssembly: Assembly {
             return TabBarCoordinator(navigationController: navigationController, tabBarViewController: tabBarController, coordinatorfactory:  coordinatorFactory)
         }
         
-        // MARK: - CreateAccountCoordinator
+        // MARK: - ProfileCoordinator
         container.register(ProfileCoordinator.self) { _ in
             guard let tabBarController = appCoordinator?.tabBarController else {
                 fatalError("AppCoordinator não foi inicializado corretamente")
             }
             return ProfileCoordinator(tabBarController: tabBarController, coordinatorFactory: coordinatorFactory, viewModelFactory: viewModelFactory)
+        }
+        
+        // MARK: - MapsCoordinator
+        container.register(MapsCoordinator.self) { _ in
+            guard let tabBarController = appCoordinator?.tabBarController else {
+                fatalError("AppCoordinator não foi inicializado corretamente")
+            }
+            return MapsCoordinator(tabBarController: tabBarController, coordinatorFactory: coordinatorFactory, viewModelFactory: viewModelFactory)
         }
     }
 }

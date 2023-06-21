@@ -44,4 +44,9 @@ class CoordinatorFactoryImplementation: CoordinatorFactory {
         return coordinator
     }
     
+    // MARK: - MapsCoordinator
+    func makeMapsCoordinator() -> Features.MapsCoordinator  {
+        let coordinator = container.resolveSafe(MapsCoordinator.self)
+        return coordinator
+    }
 }

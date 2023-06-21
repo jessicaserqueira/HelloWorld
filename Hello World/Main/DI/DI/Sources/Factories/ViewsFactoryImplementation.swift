@@ -20,21 +20,28 @@ class ViewsFactoryImplementation: ViewModelFactory {
     
     func makeLoginViewModel() -> Features.LoginViewModel {
         guard let viewModel = container.resolveSafe((any LoginModelling).self) as? LoginViewModel else {
-            preconditionFailure("LoginViewPresenting is nil")
+            preconditionFailure("LoginModelling is nil")
         }
         return viewModel
     }
     
     func makeCreateAccountViewModel() -> Features.CreateAccountViewModel {
         guard let viewModel = container.resolveSafe((any CreateAccountModelling).self) as? CreateAccountViewModel else {
-            preconditionFailure("LoginViewPresenting is nil")
+            preconditionFailure("CreateAccountModelling is nil")
         }
         return viewModel
     }
     
     func makeProfileViewModel() -> Features.ProfileViewModel {
         guard let viewModel = container.resolveSafe((any ProfileModelling).self) as? ProfileViewModel else {
-            preconditionFailure("LoginViewPresenting is nil")
+            preconditionFailure("ProfileModelling is nil")
+        }
+        return viewModel
+    }
+    
+    func makeMapsViewModel() -> Features.MapsViewModel {
+        guard let viewModel = container.resolveSafe((any MapsModelling).self) as? MapsViewModel else {
+            preconditionFailure("MapsModelling is nil")
         }
         return viewModel
     }

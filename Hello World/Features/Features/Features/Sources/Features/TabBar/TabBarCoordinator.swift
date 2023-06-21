@@ -25,13 +25,20 @@ public class TabBarCoordinator: Coordinator {
     
     @MainActor public func start() {
         let profileCoordinator = makeProfileCoordinator()
-        childCoordinators = [profileCoordinator]
+        let mapsCoordinator = makeMapsCoordinator()
         
-        tabBarViewController.setViewControllers([profileCoordinator.navigationController], animated: false)
+        childCoordinators = [profileCoordinator, mapsCoordinator]
+        tabBarViewController.setViewControllers(
+            [
+                profileCoordinator.navigationController,
+                mapsCoordinator.navigationController
+            ],
+            animated: false
+        )
         navigationController.setViewControllers([tabBarViewController], animated: false)
-       
+        
     }
-
+    
     
     private func makeProfileCoordinator() -> ProfileCoordinator {
         let coordiantor = coordinatorfactory.makeProfileCoordinator()
@@ -40,5 +47,14 @@ public class TabBarCoordinator: Coordinator {
                                                                    image: UIImage(systemName: "person.fill"),
                                                                    selectedImage: UIImage(systemName: "person.fill"))
         return coordiantor
+    }
+    
+    private func makeMapsCoordinator() -> MapsCoordinator {
+        let coordinator = coordinatorfactory.makeMapsCoordinator()
+        coordinator.start()
+        coordinator.navigationController.tabBarItem = UITabBarItem(title: L10n.Maps.Title.title,
+                                                                   image: UIImage(systemName: "map.fill"),
+                                                                   selectedImage: UIImage(systemName: "map.fill"))
+        return coordinator
     }
 }

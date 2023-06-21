@@ -12,10 +12,18 @@ import Foundation
 internal enum L10n {
     internal enum Profile {
       internal enum Title {
-        /// Personagens
+        /// Profile
         internal static let title = L10n.tr("Localizable", "Profile.Title.tile", fallback: "Perfil")
       }
     }
+    
+    internal enum Maps {
+      internal enum Title {
+        /// Maps
+        internal static let title = L10n.tr("Localizable", "Maps.Title.tile", fallback: "Maps")
+      }
+    }
+    
   internal enum CreateAccount {
     internal enum Ask {
       /// Já possui conta?

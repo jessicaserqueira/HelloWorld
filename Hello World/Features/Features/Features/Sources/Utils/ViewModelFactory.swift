@@ -12,5 +12,6 @@ public protocol ViewModelFactory: DependencyFactory {
     func makeLoginViewModel() -> LoginViewModel
     func makeCreateAccountViewModel() -> CreateAccountViewModel
     func makeProfileViewModel() -> ProfileViewModel
+    func makeMapsViewModel() -> MapsViewModel
 
 }

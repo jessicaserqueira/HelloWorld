@@ -41,6 +41,7 @@
 		A4A685AB2A1D3A90003E97EA /* ViewsFactoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685AA2A1D3A90003E97EA /* ViewsFactoryImplementation.swift */; };
 		A4A685CF2A1E4976003E97EA /* CreateAccountAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685CE2A1E4976003E97EA /* CreateAccountAssembly.swift */; };
 		A4AF73982A1BE7C2009A9A6D /* ViewsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF73972A1BE7C2009A9A6D /* ViewsFactory.swift */; };
+		A4B055E42A433762007D393D /* MapsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055E32A433762007D393D /* MapsAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		A4A685AA2A1D3A90003E97EA /* ViewsFactoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsFactoryImplementation.swift; sourceTree = "<group>"; };
 		A4A685CE2A1E4976003E97EA /* CreateAccountAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountAssembly.swift; sourceTree = "<group>"; };
 		A4AF73972A1BE7C2009A9A6D /* ViewsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsFactory.swift; sourceTree = "<group>"; };
+		A4B055E32A433762007D393D /* MapsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				A40D048C2A156B35004F42ED /* LoginAssembly.swift */,
 				A4A685CE2A1E4976003E97EA /* CreateAccountAssembly.swift */,
 				A43311512A2F9D81008B6DB6 /* ProfileAssembly.swift */,
+				A4B055E32A433762007D393D /* MapsAssembly.swift */,
 			);
 			path = FeaturesAssembly;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				A41DA2A12A15635300E3AB98 /* DI.docc in Sources */,
 				A40D04822A156B00004F42ED /* CoordinatorFactoryImplementation.swift in Sources */,
 				A40D04892A156B28004F42ED /* DomainAssembly.swift in Sources */,
+				A4B055E42A433762007D393D /* MapsAssembly.swift in Sources */,
 				A40D048D2A156B35004F42ED /* LoginAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

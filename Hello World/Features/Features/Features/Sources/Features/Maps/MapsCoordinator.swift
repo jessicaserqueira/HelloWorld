@@ -23,6 +23,15 @@ public class MapsCoordinator: Coordinator {
     }
     
     public func start() {
-        
+        showMaps()
+    }
+}
+
+extension MapsCoordinator: MapsCoordinating {
+    public func showMaps() {
+        let viewModel = viewModelFactory.makeMapsViewModel()
+        let view = MapsView(viewModel: viewModel)
+        let hostingController = UIHostingController(rootView: view)
+        navigationController.pushViewController(hostingController, animated: true)
     }
 }

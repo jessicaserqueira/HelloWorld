@@ -62,7 +62,7 @@ struct ProfileView: View {
                                     .font(.headline)
                                     .padding(.top, 20)
                                 
-                                TextEditor(text: profile.bio)
+                                Text(profile.bio)
                                     .font(.body)
                                     .multilineTextAlignment(.center)
                                     .frame(maxWidth: 250, maxHeight: 100)
