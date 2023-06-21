@@ -49,6 +49,11 @@
 		A4A685B12A1D46DB003E97EA /* CreateAccountModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685B02A1D46DB003E97EA /* CreateAccountModelling.swift */; };
 		A4A685B32A1D474B003E97EA /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685B22A1D474B003E97EA /* ViewModelFactory.swift */; };
 		A4A685E12A1E77D6003E97EA /* AccountValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A685E02A1E77D6003E97EA /* AccountValidator.swift */; };
+		A4B055DA2A432CD7007D393D /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055D92A432CD7007D393D /* MapsViewModel.swift */; };
+		A4B055DC2A432CE4007D393D /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055DB2A432CE4007D393D /* MapsView.swift */; };
+		A4B055DE2A432CF5007D393D /* MapsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055DD2A432CF5007D393D /* MapsCoordinator.swift */; };
+		A4B055E02A432D65007D393D /* MapsModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055DF2A432D65007D393D /* MapsModelling.swift */; };
+		A4B055E22A432D93007D393D /* MapsCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055E12A432D93007D393D /* MapsCoordinating.swift */; };
 		A4BC905A2A266F8300859CCA /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A4BC90592A266F8300859CCA /* Swinject */; };
 		A4BC905D2A266FAC00859CCA /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = A4BC905C2A266FAC00859CCA /* SwinjectAutoregistration */; };
 		A4DB65132A2523A600A699FB /* MockLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DB65122A2523A600A699FB /* MockLoginUseCase.swift */; };
@@ -122,6 +127,11 @@
 		A4A685B02A1D46DB003E97EA /* CreateAccountModelling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountModelling.swift; sourceTree = "<group>"; };
 		A4A685B22A1D474B003E97EA /* ViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		A4A685E02A1E77D6003E97EA /* AccountValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountValidator.swift; sourceTree = "<group>"; };
+		A4B055D92A432CD7007D393D /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
+		A4B055DB2A432CE4007D393D /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
+		A4B055DD2A432CF5007D393D /* MapsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsCoordinator.swift; sourceTree = "<group>"; };
+		A4B055DF2A432D65007D393D /* MapsModelling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsModelling.swift; sourceTree = "<group>"; };
+		A4B055E12A432D93007D393D /* MapsCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsCoordinating.swift; sourceTree = "<group>"; };
 		A4DB65122A2523A600A699FB /* MockLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginUseCase.swift; sourceTree = "<group>"; };
 		A4DB65142A2523EA00A699FB /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				A433114E2A2F6EED008B6DB6 /* TabBar */,
+				A4B055D62A432C90007D393D /* Maps */,
 				A42A3B8A2A2E5FC000CDFC59 /* Profile */,
 				A40D049D2A156C49004F42ED /* CreateAccount */,
 				A40D049E2A156C55004F42ED /* Login */,
@@ -366,6 +377,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A4B055D62A432C90007D393D /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				A4B055D72A432CA1007D393D /* Models */,
+				A4B055D82A432CB1007D393D /* Protocols */,
+				A4B055DD2A432CF5007D393D /* MapsCoordinator.swift */,
+				A4B055DB2A432CE4007D393D /* MapsView.swift */,
+				A4B055D92A432CD7007D393D /* MapsViewModel.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		A4B055D72A432CA1007D393D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4B055D82A432CB1007D393D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A4B055DF2A432D65007D393D /* MapsModelling.swift */,
+				A4B055E12A432D93007D393D /* MapsCoordinating.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -488,6 +527,7 @@
 				A43311412A2E610B008B6DB6 /* ProfileView.swift in Sources */,
 				A40D04AA2A156C87004F42ED /* LoginView.swift in Sources */,
 				A40D04C52A156CF1004F42ED /* PasswordTextField.swift in Sources */,
+				A4B055DC2A432CE4007D393D /* MapsView.swift in Sources */,
 				A40D04C42A156CF1004F42ED /* NameTextField.swift in Sources */,
 				A40D04C22A156CF1004F42ED /* EmailTextField.swift in Sources */,
 				A433114A2A2E6174008B6DB6 /* ProfileModelling.swift in Sources */,
@@ -495,7 +535,9 @@
 				A40D04A02A156C62004F42ED /* AppCoordinator.swift in Sources */,
 				A40D04A62A156C75004F42ED /* CreateAccountViewModel.swift in Sources */,
 				A40D04C62A156CF1004F42ED /* ImagePicker.swift in Sources */,
+				A4B055E22A432D93007D393D /* MapsCoordinating.swift in Sources */,
 				A41DA2E92A15638300E3AB98 /* Features.docc in Sources */,
+				A4B055DA2A432CD7007D393D /* MapsViewModel.swift in Sources */,
 				A43311482A2E615B008B6DB6 /* ProfileCoordinating.swift in Sources */,
 				A40D04CC2A156CFE004F42ED /* CoordinatorFactory.swift in Sources */,
 				A40D04CA2A156CFE004F42ED /* DependencyFactory.swift in Sources */,
@@ -511,7 +553,9 @@
 				A40D04B22A156C9E004F42ED /* LoginModelling.swift in Sources */,
 				A40D04A42A156C75004F42ED /* CreateAccountCoordinator.swift in Sources */,
 				A40D04AC2A156C87004F42ED /* LoginCoordinator.swift in Sources */,
+				A4B055E02A432D65007D393D /* MapsModelling.swift in Sources */,
 				A433114D2A2E6190008B6DB6 /* ProfileModel.swift in Sources */,
+				A4B055DE2A432CF5007D393D /* MapsCoordinator.swift in Sources */,
 				A40D04B12A156C9E004F42ED /* LoginCoordinating.swift in Sources */,
 				A43311432A2E612E008B6DB6 /* ProfileViewModel.swift in Sources */,
 				A40D04C32A156CF1004F42ED /* String.swift in Sources */,
