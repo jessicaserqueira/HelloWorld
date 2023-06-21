@@ -40,5 +40,8 @@ extension ProfileViewModel: ProfileModelling {
             }
         }
     }
+    public func saveBio() {
+       
+    }
 
 }

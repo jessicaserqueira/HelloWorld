@@ -9,4 +9,5 @@ import SwiftUI
 
 public protocol ProfileModelling {
     func updateProfile()
+    func saveBio() 
 }
