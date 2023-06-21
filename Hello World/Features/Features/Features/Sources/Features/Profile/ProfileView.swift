@@ -5,7 +5,6 @@
 //  Created by Jessica Serqueira on 05/06/23.
 //
 import SwiftUI
-import Domain
 
 struct ProfileView: View {
     @ObservedObject var viewModel: ProfileViewModel
@@ -25,46 +24,65 @@ struct ProfileView: View {
                         .frame(width: 300, height: 400)
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
-                                .stroke(Color.white, lineWidth: 4)
+                                .stroke(Color.blue, lineWidth: 4)
                         )
                     
-                    VStack {
+                    VStack(spacing: 20) {
                         if let profile = viewModel.profile.first {
-                            AsyncImage(url: URL(string: profile.profileUrl)) { image in
-                                image.resizable()
-                                    .scaledToFit()
-                            } placeholder: {
-                                ProgressView()
-                                    .frame(width: 50, height: 50)
-                            }
-                            .scaledToFill()
-                            .frame(width: 130, height: 130)
-                            .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                            .shadow(radius: 7)
-                            .offset(y: -65)
-                            
-                            VStack {
-                                Text("Nome: \(profile.name)")
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                Text("E-mail: \(profile.email)")
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                            ZStack {
+                                Circle()
+                                    .foregroundColor(.blue)
+                                    .frame(width: 130, height: 130)
                                 
-                                Text("Sobre mim")
+                                AsyncImage(url: URL(string: profile.profileUrl)) { image in
+                                    image
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 120, height: 120)
+                                        .clipShape(Circle())
+                                        .shadow(radius: 7)
+                                } placeholder: {
+                                    ProgressView()
+                                        .frame(width: 50, height: 50)
+                                }
+                            }
+                            .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                            
+                            VStack(spacing: 10) {
+                                Text(profile.name)
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.blue)
+                                
+                                Text(profile.email)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                
+                                Text("Sobre Mim")
                                     .font(.headline)
                                     .padding(.top, 20)
                                 
-                                VStack {
-                                    Text(profile.bio)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .frame(width: 250, height: 80)
+                                TextEditor(text: profile.bio)
+                                    .font(.body)
+                                    .multilineTextAlignment(.center)
+                                    .frame(maxWidth: 250, maxHeight: 100)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.blue, lineWidth: 1)
+                                    )
+                                    .padding()
+                                
+                                Button(action: {
+                                    viewModel.saveBio()
+                                }) {
+                                    Text("Salvar")
+                                        .foregroundColor(.white)
                                         .padding()
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .stroke(Color.blue, lineWidth: 1)
-                                        )
+                                        .background(Color.blue)
+                                        .cornerRadius(10)
                                 }
                             }
+                            .padding()
                         }
                     }
                 }
@@ -74,7 +92,6 @@ struct ProfileView: View {
         }
         .onAppear {
             viewModel.updateProfile()
-            
         }
     }
 }

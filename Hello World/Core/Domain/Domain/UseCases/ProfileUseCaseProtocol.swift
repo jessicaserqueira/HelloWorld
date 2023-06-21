@@ -9,4 +9,5 @@ import Foundation
 
 public protocol ProfileUseCaseProtocol {
     func fetchProfile(completion: @escaping ([Profile]) -> Void)
+    
 }
