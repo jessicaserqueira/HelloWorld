@@ -11,6 +11,9 @@
 		A41DA2832A15633500E3AB98 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA2782A15633500E3AB98 /* Networking.framework */; };
 		A41DA2882A15633500E3AB98 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2872A15633500E3AB98 /* NetworkingTests.swift */; };
 		A41DA2892A15633500E3AB98 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA27B2A15633500E3AB98 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A43463F02A46041C0036C6C0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43463EF2A46041C0036C6C0 /* Domain.framework */; };
+		A43463F12A46041C0036C6C0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A43463EF2A46041C0036C6C0 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4B055EF2A447DE4007D393D /* MapAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055EE2A447DE4007D393D /* MapAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +26,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A43463F22A46041C0036C6C0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A43463F12A46041C0036C6C0 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A41DA2782A15633500E3AB98 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA27B2A15633500E3AB98 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		A41DA27C2A15633500E3AB98 /* Networking.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Networking.docc; sourceTree = "<group>"; };
 		A41DA2822A15633500E3AB98 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA2872A15633500E3AB98 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		A43463EF2A46041C0036C6C0 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4B055EE2A447DE4007D393D /* MapAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43463F02A46041C0036C6C0 /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +76,7 @@
 				A41DA27A2A15633500E3AB98 /* Networking */,
 				A41DA2862A15633500E3AB98 /* NetworkingTests */,
 				A41DA2792A15633500E3AB98 /* Products */,
+				A43463EE2A46041C0036C6C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +92,7 @@
 		A41DA27A2A15633500E3AB98 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				A4B055EC2A447D52007D393D /* Sources */,
 				A41DA27B2A15633500E3AB98 /* Networking.h */,
 				A41DA27C2A15633500E3AB98 /* Networking.docc */,
 			);
@@ -83,6 +105,30 @@
 				A41DA2872A15633500E3AB98 /* NetworkingTests.swift */,
 			);
 			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		A43463EE2A46041C0036C6C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A43463EF2A46041C0036C6C0 /* Domain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4B055EC2A447D52007D393D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A4B055ED2A447D83007D393D /* DataSource */,
+				A4B055EE2A447DE4007D393D /* MapAPIService.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A4B055ED2A447D83007D393D /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +153,7 @@
 				A41DA2742A15633500E3AB98 /* Sources */,
 				A41DA2752A15633500E3AB98 /* Frameworks */,
 				A41DA2762A15633500E3AB98 /* Resources */,
+				A43463F22A46041C0036C6C0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A41DA27D2A15633500E3AB98 /* Networking.docc in Sources */,
+				A4B055EF2A447DE4007D393D /* MapAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +442,7 @@
 		A41DA2902A15633500E3AB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -409,6 +458,7 @@
 		A41DA2912A15633500E3AB98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

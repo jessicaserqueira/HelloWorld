@@ -21,6 +21,9 @@
 		A47CD2022A38AAF0003C02E0 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD2012A38AAF0003C02E0 /* ProfileRepository.swift */; };
 		A47CD2042A38AB17003C02E0 /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD2032A38AB17003C02E0 /* ProfileUseCase.swift */; };
 		A47CD2072A38AB46003C02E0 /* ProfileUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD2062A38AB46003C02E0 /* ProfileUseCaseProtocol.swift */; };
+		A4B055F12A44835E007D393D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055F02A44835E007D393D /* Address.swift */; };
+		A4B055F32A448373007D393D /* Datum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055F22A448373007D393D /* Datum.swift */; };
+		A4B055F52A4483A0007D393D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055F42A4483A0007D393D /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A47CD2012A38AAF0003C02E0 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		A47CD2032A38AB17003C02E0 /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
 		A47CD2062A38AB46003C02E0 /* ProfileUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCaseProtocol.swift; sourceTree = "<group>"; };
+		A4B055F02A44835E007D393D /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		A4B055F22A448373007D393D /* Datum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datum.swift; sourceTree = "<group>"; };
+		A4B055F42A4483A0007D393D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				A47CD1F72A38A282003C02E0 /* Profile.swift */,
+				A4B055F02A44835E007D393D /* Address.swift */,
+				A4B055F22A448373007D393D /* Datum.swift */,
+				A4B055F42A4483A0007D393D /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,7 +263,10 @@
 				A40D04DF2A156D9F004F42ED /* CreateAccountUseCase.swift in Sources */,
 				A40D04E12A156D9F004F42ED /* LoginUseCase.swift in Sources */,
 				A47CD2042A38AB17003C02E0 /* ProfileUseCase.swift in Sources */,
+				A4B055F52A4483A0007D393D /* Location.swift in Sources */,
+				A4B055F12A44835E007D393D /* Address.swift in Sources */,
 				A47CD1F82A38A282003C02E0 /* Profile.swift in Sources */,
+				A4B055F32A448373007D393D /* Datum.swift in Sources */,
 				A40D04E52A156DAA004F42ED /* LoginRepository.swift in Sources */,
 				A47CD2022A38AAF0003C02E0 /* ProfileRepository.swift in Sources */,
 				A47CD2072A38AB46003C02E0 /* ProfileUseCaseProtocol.swift in Sources */,

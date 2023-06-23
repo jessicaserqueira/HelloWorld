@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 public protocol MapsModelling {
+    func addAnnotation(coordinate: CLLocationCoordinate2D)
 }

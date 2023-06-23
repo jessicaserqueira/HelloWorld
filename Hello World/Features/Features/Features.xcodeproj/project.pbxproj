@@ -54,6 +54,7 @@
 		A4B055DE2A432CF5007D393D /* MapsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055DD2A432CF5007D393D /* MapsCoordinator.swift */; };
 		A4B055E02A432D65007D393D /* MapsModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055DF2A432D65007D393D /* MapsModelling.swift */; };
 		A4B055E22A432D93007D393D /* MapsCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055E12A432D93007D393D /* MapsCoordinating.swift */; };
+		A4B055E62A433C7A007D393D /* AnnotationItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055E52A433C7A007D393D /* AnnotationItemModel.swift */; };
 		A4BC905A2A266F8300859CCA /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A4BC90592A266F8300859CCA /* Swinject */; };
 		A4BC905D2A266FAC00859CCA /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = A4BC905C2A266FAC00859CCA /* SwinjectAutoregistration */; };
 		A4DB65132A2523A600A699FB /* MockLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DB65122A2523A600A699FB /* MockLoginUseCase.swift */; };
@@ -132,6 +133,8 @@
 		A4B055DD2A432CF5007D393D /* MapsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsCoordinator.swift; sourceTree = "<group>"; };
 		A4B055DF2A432D65007D393D /* MapsModelling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsModelling.swift; sourceTree = "<group>"; };
 		A4B055E12A432D93007D393D /* MapsCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsCoordinating.swift; sourceTree = "<group>"; };
+		A4B055E52A433C7A007D393D /* AnnotationItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationItemModel.swift; sourceTree = "<group>"; };
+		A4B055EB2A447BFA007D393D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A4DB65122A2523A600A699FB /* MockLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginUseCase.swift; sourceTree = "<group>"; };
 		A4DB65142A2523EA00A699FB /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -295,6 +298,7 @@
 		A41DA2E62A15638300E3AB98 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A4B055EB2A447BFA007D393D /* Info.plist */,
 				A40D04962A156BFA004F42ED /* Sources */,
 				A41DA2E72A15638300E3AB98 /* Features.h */,
 				A41DA2E82A15638300E3AB98 /* Features.docc */,
@@ -392,6 +396,7 @@
 		A4B055D72A432CA1007D393D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A4B055E52A433C7A007D393D /* AnnotationItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 				A40D04B22A156C9E004F42ED /* LoginModelling.swift in Sources */,
 				A40D04A42A156C75004F42ED /* CreateAccountCoordinator.swift in Sources */,
 				A40D04AC2A156C87004F42ED /* LoginCoordinator.swift in Sources */,
+				A4B055E62A433C7A007D393D /* AnnotationItemModel.swift in Sources */,
 				A4B055E02A432D65007D393D /* MapsModelling.swift in Sources */,
 				A433114D2A2E6190008B6DB6 /* ProfileModel.swift in Sources */,
 				A4B055DE2A432CF5007D393D /* MapsCoordinator.swift in Sources */,
@@ -717,6 +723,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Features/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -744,6 +751,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Features/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

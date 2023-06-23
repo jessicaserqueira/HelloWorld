@@ -22,6 +22,9 @@
 		A47CD1F52A38A21D003C02E0 /* ProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD1F42A38A21D003C02E0 /* ProfileDTO.swift */; };
 		A47CD1FE2A38AA5F003C02E0 /* ProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD1FD2A38AA5F003C02E0 /* ProfileDataSource.swift */; };
 		A47CD2002A38AA80003C02E0 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CD1FF2A38AA80003C02E0 /* ProfileRepository.swift */; };
+		A4B055F72A4483CC007D393D /* LocationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055F62A4483CC007D393D /* LocationDTO.swift */; };
+		A4B055F92A4483E9007D393D /* DatumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055F82A4483E9007D393D /* DatumDTO.swift */; };
+		A4B055FB2A448413007D393D /* AddressDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055FA2A448413007D393D /* AddressDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		A47CD1F42A38A21D003C02E0 /* ProfileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDTO.swift; sourceTree = "<group>"; };
 		A47CD1FD2A38AA5F003C02E0 /* ProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSource.swift; sourceTree = "<group>"; };
 		A47CD1FF2A38AA80003C02E0 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		A4B055F62A4483CC007D393D /* LocationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDTO.swift; sourceTree = "<group>"; };
+		A4B055F82A4483E9007D393D /* DatumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumDTO.swift; sourceTree = "<group>"; };
+		A4B055FA2A448413007D393D /* AddressDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				A47CD1F42A38A21D003C02E0 /* ProfileDTO.swift */,
+				A4B055F62A4483CC007D393D /* LocationDTO.swift */,
+				A4B055F82A4483E9007D393D /* DatumDTO.swift */,
+				A4B055FA2A448413007D393D /* AddressDTO.swift */,
 			);
 			path = DataTransferObjectes;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40D04F12A156DF3004F42ED /* LoginRepository.swift in Sources */,
+				A4B055F72A4483CC007D393D /* LocationDTO.swift in Sources */,
 				A47CD1F52A38A21D003C02E0 /* ProfileDTO.swift in Sources */,
 				A47CD1FE2A38AA5F003C02E0 /* ProfileDataSource.swift in Sources */,
 				A40D04EC2A156DEB004F42ED /* CreateAccountDataSource.swift in Sources */,
@@ -283,6 +293,8 @@
 				A47CD2002A38AA80003C02E0 /* ProfileRepository.swift in Sources */,
 				A40D04ED2A156DEB004F42ED /* LoginDataSource.swift in Sources */,
 				A41DA2112A15630400E3AB98 /* AppData.docc in Sources */,
+				A4B055FB2A448413007D393D /* AddressDTO.swift in Sources */,
+				A4B055F92A4483E9007D393D /* DatumDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
