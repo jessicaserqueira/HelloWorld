@@ -28,6 +28,7 @@ public class DependencyInjector {
             ViewsFactory(),
             
             FireStorageAssembly(),
+            NetworkingAssembly(),
             DomainAssembly(),
             DataAssembly(),
             

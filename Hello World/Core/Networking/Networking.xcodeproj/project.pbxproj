@@ -11,8 +11,9 @@
 		A41DA2832A15633500E3AB98 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DA2782A15633500E3AB98 /* Networking.framework */; };
 		A41DA2882A15633500E3AB98 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2872A15633500E3AB98 /* NetworkingTests.swift */; };
 		A41DA2892A15633500E3AB98 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA27B2A15633500E3AB98 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A43463F02A46041C0036C6C0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43463EF2A46041C0036C6C0 /* Domain.framework */; };
-		A43463F12A46041C0036C6C0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A43463EF2A46041C0036C6C0 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A43463F42A4607F90036C6C0 /* MapRemoteDataSouce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43463F32A4607F90036C6C0 /* MapRemoteDataSouce.swift */; };
+		A43464002A460AEE0036C6C0 /* AppData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43463FF2A460AEE0036C6C0 /* AppData.framework */; };
+		A43464012A460AEE0036C6C0 /* AppData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A43463FF2A460AEE0036C6C0 /* AppData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4B055EF2A447DE4007D393D /* MapAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B055EE2A447DE4007D393D /* MapAPIService.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A43463F12A46041C0036C6C0 /* Domain.framework in Embed Frameworks */,
+				A43464012A460AEE0036C6C0 /* AppData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +48,8 @@
 		A41DA2822A15633500E3AB98 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA2872A15633500E3AB98 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		A43463EF2A46041C0036C6C0 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A43463F32A4607F90036C6C0 /* MapRemoteDataSouce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRemoteDataSouce.swift; sourceTree = "<group>"; };
+		A43463FF2A460AEE0036C6C0 /* AppData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B055EE2A447DE4007D393D /* MapAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43463F02A46041C0036C6C0 /* Domain.framework in Frameworks */,
+				A43464002A460AEE0036C6C0 /* AppData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +113,7 @@
 		A43463EE2A46041C0036C6C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A43463FF2A460AEE0036C6C0 /* AppData.framework */,
 				A43463EF2A46041C0036C6C0 /* Domain.framework */,
 			);
 			name = Frameworks;
@@ -127,6 +131,7 @@
 		A4B055ED2A447D83007D393D /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				A43463F32A4607F90036C6C0 /* MapRemoteDataSouce.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			files = (
 				A41DA27D2A15633500E3AB98 /* Networking.docc in Sources */,
 				A4B055EF2A447DE4007D393D /* MapAPIService.swift in Sources */,
+				A43463F42A4607F90036C6C0 /* MapRemoteDataSouce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

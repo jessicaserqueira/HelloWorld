@@ -7,22 +7,22 @@
 
 import Foundation
 import MapKit
-import Domain
+import AppData
 
-public class MapAPI: ObservableObject{
+public class MapAPIService: ObservableObject{
    private let BASE_URL = "http://api.positionstack.com/v1/forward"
    private let API_KEY = "07e90de1080cfa947496b42746aca7b6"
    
    @Published var region: MKCoordinateRegion
    @Published var coordinates = []
-   @Published var locations: [Location] = []
-   
+   @Published var locations: [LocationDTO] = []
+    
    
  public init() {
       // Defualt Info
       self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 5, longitudeDelta: 5))
       
-      self.locations.insert(Location(name: "Pin", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)), at: 0)
+      self.locations.insert(LocationDTO(name: "Pin", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)), at: 0)
    }
    
    // API request
@@ -39,7 +39,7 @@ public class MapAPI: ObservableObject{
             print(error!.localizedDescription)
             return }
          
-         guard let newCoordinates = try? JSONDecoder().decode(Address.self, from: data) else { return }
+         guard let newCoordinates = try? JSONDecoder().decode(AddressDTO.self, from: data) else { return }
          
          if newCoordinates.data.isEmpty {
             print("Could not find address...")
@@ -55,7 +55,7 @@ public class MapAPI: ObservableObject{
             self.coordinates = [lat, lon]
             self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lat, longitude: lon), span: MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta))
             
-            let new_location = Location(name: "\(details.name)", coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+            let new_location = LocationDTO(name: "\(details.name)", coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
             self.locations.removeAll()
             self.locations.insert(new_location, at: 0)
             

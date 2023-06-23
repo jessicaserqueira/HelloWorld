@@ -22,6 +22,7 @@
 		A41DA2AC2A15635300E3AB98 /* DITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DA2AB2A15635300E3AB98 /* DITests.swift */; };
 		A41DA2AD2A15635300E3AB98 /* DI.h in Headers */ = {isa = PBXBuildFile; fileRef = A41DA29F2A15635300E3AB98 /* DI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A43311522A2F9D81008B6DB6 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43311512A2F9D81008B6DB6 /* ProfileAssembly.swift */; };
+		A43464032A460C4B0036C6C0 /* NetworkingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43464022A460C4B0036C6C0 /* NetworkingAssembly.swift */; };
 		A474A3152A1689DD008F6540 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A474A3142A1689DD008F6540 /* Swinject */; };
 		A474A31B2A168A50008F6540 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3172A168A50008F6540 /* Common.framework */; };
 		A474A31C2A168A50008F6540 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A474A3172A168A50008F6540 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -91,6 +92,7 @@
 		A41DA2A62A15635300E3AB98 /* DITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DA2AB2A15635300E3AB98 /* DITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DITests.swift; sourceTree = "<group>"; };
 		A43311512A2F9D81008B6DB6 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		A43464022A460C4B0036C6C0 /* NetworkingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAssembly.swift; sourceTree = "<group>"; };
 		A474A3172A168A50008F6540 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A474A3182A168A50008F6540 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A474A3192A168A50008F6540 /* Features.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Features.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 				A40D04862A156B28004F42ED /* DomainAssembly.swift */,
 				A40D04882A156B28004F42ED /* AppDataAssembly.swift */,
 				A40D04872A156B28004F42ED /* FireStorageAssembly.swift */,
+				A43464022A460C4B0036C6C0 /* NetworkingAssembly.swift */,
 			);
 			path = CoreAssembly;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			files = (
 				A40D04952A156BDB004F42ED /* DependencyFactory.swift in Sources */,
 				A40D048B2A156B28004F42ED /* AppDataAssembly.swift in Sources */,
+				A43464032A460C4B0036C6C0 /* NetworkingAssembly.swift in Sources */,
 				A4AF73982A1BE7C2009A9A6D /* ViewsFactory.swift in Sources */,
 				A40D048F2A156B4C004F42ED /* DependencyInjector.swift in Sources */,
 				A40D04832A156B00004F42ED /* CoordinatorsAssembly.swift in Sources */,
